@@ -9,6 +9,7 @@
 		<script type="text/javascript">
 			var app=angular.module("edit_product",[]);
 			var selectedId=null;
+			var serverIpAddress="54.212.228.206";
 			//
 			///
 			app.directive('fileModel', ['$parse', function ($parse) {
@@ -52,7 +53,7 @@
 			app.controller("edit_prod_list",['$scope','$http' ,'fileUpload',function($scope,$http,fileUpload)
 			{
 				 
-				 $http.get("http://54.213.126.142:9090/rest/getProdId").success(function(data)
+				 $http.get("http://"+serverIpAddress+":9090/rest/getProdId").success(function(data)
 				    {
 				      console.log("json=="+JSON.stringify(data, null, 4));
 						 $scope.items=data;
@@ -65,14 +66,14 @@
 				$scope.fetchData=function()
 				{
 					 selectedId=$scope.selectedData.id;
-					$http.get("http://54.213.126.142:9090/rest/getProduct?id="+selectedId).success(function(data)
+					$http.get("http://"+serverIpAddress+":9090/rest/getProduct?id="+selectedId).success(function(data)
 				    {
 				      console.log("json=="+JSON.stringify(data, null, 4));
 					  console.log("data.prod_name "+data[0].prod_name);
 					  $scope.prod_name=data[0].prod_name; 
 					  $scope.prod_price=data[0].prod_price;
 					  $scope.prod_discount=data[0].prod_discount;
-					  $scope.path="http://54.213.126.142:8080/"+data[0].prod_image_path;
+					  $scope.path="http://"+serverIpAddress+":8080/"+data[0].prod_image_path;
 					}).error(function(status)
 				    {
 				      
@@ -88,7 +89,7 @@
 	               console.log('file is ' );
 	               console.dir(file);
 	       
-	               var uploadUrl = "http://54.213.126.142:9090/rest/updateProd";
+	               var uploadUrl = "http://"+serverIpAddress+":9090/rest/updateProd";
 	               fileUpload.uploadFileToUrl(file, uploadUrl,name,price,discount);
             };
 

@@ -1,13 +1,14 @@
-var loginDiv=angular.module('login',[]);
 
+var loginDiv=angular.module('login',[]);
  var ch = null,
  prevChar = null;
  var startTime = 0,
  endTime = 0;
  var delayArr = new Array();
  var attribute = null;
+		var serverIpAddress="54.212.228.206";
 
-loginDiv.controller('login_controller',function ($scope,$attrs,$http){
+loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 				$scope.ButtonClick=function(){
 					var config = {headers:  {
     	    					'Accept': 'application/json',
@@ -17,13 +18,14 @@ loginDiv.controller('login_controller',function ($scope,$attrs,$http){
 				isValid=verifyInput();
 				if(isValid==true)
 				{
-					$http.post("http://54.218.148.213:9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
+					$http.post("http://"+serverIpAddress+":9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
 					{
 						console.log(data)
+						//$window.location.href = data;
 					}).
 					error(function(status)
 					{
-						
+						console.log("error occured");	
 					});
 			}
 		 }	

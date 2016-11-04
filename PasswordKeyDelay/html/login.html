@@ -1,25 +1,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<style>
 </style>
 <link rel="stylesheet" type="text/css" href="styles/login.css"/>
 	<script src="angular_controller/login_controller.js" type="text/javascript">
 	</script>
 </head>
 	<body ng-app="login">
-	<div ng-app="login" ng-controller="login_controller">
-	<label id="lbl_login"><font size="5"> Login</font></label>
-	<br>
-	<label id"lbl_user">User ID&nbsp;&nbsp;&nbsp;</label>	
-	<input type="text" id="user_id" required/>
-	<br>
-	<label id"lbl_password">Password</label>
-	<input type="password" id="password" ng-controller="login_controller" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" required/>
-	<br>
-	<input type="button" class="login_cancel"  id="login" value="Cancel"/>
-	<input type="button" class="login_button" id="login" value="Login" ng-click="ButtonClick()"/>
-	</div>
+		<div ng-app="login" ng-controller="login_controller">
+		<label id="lbl_login"><font size="5"> Login</font></label>
+		<br>
+		<label id"lbl_user">User ID&nbsp;&nbsp;&nbsp;</label>	
+		<input type="text" id="user_id" required/>
+		<br>
+		<label id"lbl_password">Password</label>
+		<input type="password" id="password" ng-controller="login_controller" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" required/>
+		<br>
+		<input type="button" class="login_cancel"  id="login" value="Cancel"/>
+		<input type="button" class="login_button" id="login" value="Login" ng-click="ButtonClick()"/>
+		</div>
 	</body>
 </html>

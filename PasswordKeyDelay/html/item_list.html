@@ -6,10 +6,10 @@
 	module=angular.module('item_list', []);
 	module.controller('items',function($scope,$http)
 	{
-		$scope.addRow=function()
-		{
+		var serverIpAddress="54.212.228.206";
+		
 			console.log("Hitting request...");
-			$http.get("http://54.213.126.142:9090/rest/getProducts").success(function(res)
+			$http.get("http://"+serverIpAddress+":9090/rest/getProducts").success(function(res)
 		    {
 				      var prodCount=res.length;
 				      console.log("Size of reqponse is "+prodCount);
@@ -24,6 +24,7 @@
 				    var i=0;
 				    for(var k=0;k<rowCount;k++)
 				    {
+				    	console.log("adding row");
 					    var row = table.insertRow(0);
 					    for(;i<prodCount;i++)
 					    {
@@ -34,7 +35,7 @@
   						    img.style.width = '130px';
     						var prod=res[i];
     						//setting up product image.	
-    						img.src ='http://54.213.126.142:8080/'+prod.prod_image_path;
+    						img.src ="http://"+serverIpAddress+":8080/"+prod.prod_image_path;
     						cell.appendChild(img);
     						var labelName=document.createElement('label');
     						labelName.setAttribute('id',prod.id);
@@ -78,13 +79,12 @@
 			    });
 
 		    
-		}
+		
 	});
 </script>
 <link rel="stylesheet" type="text/css" href="styles/table.css"/>
 </head>
 	<body ng-app="item_list">
-		<input type="button" class="add_item_button" value="Add Row" ng-controller="items" ng-click="addRow()"/> 
 		<div>
 			<table id="items" ng-controller="items">
 			</table>
