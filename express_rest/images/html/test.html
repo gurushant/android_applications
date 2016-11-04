@@ -1,0 +1,22 @@
+
+
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      
+      <script src="signup_controller.js" type="text/javascript">
+
+      </script>
+
+
+   </head>
+   <body ng-app="test">
+      <input id="a"  type="text"  ng-controller="controller" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()"/>
+      <input id="b"  type="text"  ng-controller="controller" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()"/>
+      <br>
+      <input id="c" type="button" ng-controller="controller" value="Show Data" ng-click="showData()"/>
+
+   </body>
+</html>
+
