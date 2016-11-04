@@ -1,10 +1,11 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="styles/item_list.css"/>
 <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript">
 	module=angular.module('item_list', []);
-	module.controller('items',function($scope,$http)
+	module.controller('items',function($scope,$http,$window)
 	{
 		var serverIpAddress="54.212.228.206";
 		
@@ -78,15 +79,20 @@
 			      
 			    });
 
-		    
+		$scope.openEditProduct=function()
+								{
+									console.log('test');
+									$window.location.href="edit_products.html";
+								}
 		
 	});
 </script>
 <link rel="stylesheet" type="text/css" href="styles/table.css"/>
 </head>
-	<body ng-app="item_list">
+	<body ng-app="item_list" ng-controller="items">
+		<input type="button" class="edit_product" ng-click="openEditProduct()" id="login" value="Edit Products"/>	
 		<div>
-			<table id="items" ng-controller="items">
+			<table id="items" >
 			</table>
 			
 		</div>
