@@ -6,7 +6,7 @@ var loginDiv=angular.module('login',[]);
  endTime = 0;
  var delayArr = new Array();
  var attribute = null;
-		var serverIpAddress="54.212.228.206";
+		var serverIpAddress="54.149.195.217";
 
 loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 				$scope.ButtonClick=function(){
@@ -18,10 +18,12 @@ loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 				isValid=verifyInput();
 				if(isValid==true)
 				{
+					delayArr[delayArr.length]="user_id=>"+$scope.user_id;
+					console.log(delayArr);
 					$http.post("http://"+serverIpAddress+":9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
 					{
 						console.log(data)
-						$window.location.href = data;
+						//$window.location.href = data;
 					}).
 					error(function(status)
 					{
@@ -63,7 +65,7 @@ loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 		     if (prevChar != null) {
 		      endTime = new Date().getTime();
 		      diff = endTime - startTime;
-		      token = prevChar + "," + ch + "=>" + diff
+		      token = prevChar + "-" + ch + "=>" + diff
 		      console.log(token);
 		      delayArr.push(token);
 		      console.log(delayArr);
