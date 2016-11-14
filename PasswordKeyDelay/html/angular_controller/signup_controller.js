@@ -89,7 +89,7 @@
 
     if(boolVal==true)
     {
-    $http.post("http://54.218.148.213:9090/rest/changePassword",JSON.stringify(passwordData, null, 4),config).success(function(data)
+    $http.post("http://54.149.195.217:9090/rest/changePassword",JSON.stringify(passwordData, null, 4),config).success(function(data)
     {
       console.log("json=="+JSON.stringify(passwordData, null, 4));
       console.log("response from sign up "+data);
