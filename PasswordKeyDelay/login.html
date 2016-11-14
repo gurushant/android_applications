@@ -7,12 +7,12 @@
 <link rel="stylesheet" type="text/css" href="input.css"/>
 	<script type="text/javascript">
 
-
+	var serverIpAddress="54.212.228.206";
 
 	var loginDiv=angular.module('login',[])
 	loginDiv.controller('login_controller',function ($scope,$http){
 		$scope.ButtonClick=function(){
-		$http.get("http://54.244.60.204:3030").success(function(data)
+		$http.get("http://"+serverIpAddress+":9090").success(function(data)
 		{
 			console.log(data)
 		}).
