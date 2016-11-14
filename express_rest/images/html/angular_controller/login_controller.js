@@ -17,9 +17,10 @@ loginDiv.controller('login_controller',function ($scope,$attrs,$http){
 				isValid=verifyInput();
 				if(isValid==true)
 				{
-					$http.post("http://54.213.126.142:9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
+					$http.post("http://localhost:9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
 					{
-						console.log(data)
+						console.log(data);
+$window.location.href = http://54.212.228.206:8080/login.html;
 					}).
 					error(function(status)
 					{

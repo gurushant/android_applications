@@ -4,6 +4,7 @@ var bodyParser=require('body-parser');
 var mysql=require('mysql');
 var session=require('express-session');
 var fileUpload = require('express-fileupload');
+var cookieParser = require('cookie-parser');
 
 
 app.use(bodyParser());
@@ -14,21 +15,52 @@ app.use(fileUpload());
 var connection=mysql.createConnection({host:'localhost',user:'root',password:'root',database:'admin'});
 connection.connect();
 
-const THRESHOLD=20;
+const THRESHOLD=2000;
 
 app.listen(9090,function(){
 	console.log('Listeneing on 9090 port');
 });
 
+app.get('/index.html', function(req,res) {
+  res.sendFile('/home/ec2-user/nodejs/express_rest/public/index.html');
+});
+
+
 app.get('/test',function(req,res){
+	        res.header("Access-Control-Allow-Origin", "*");
+	session=req.session;
+	session.test="dev";
 	res.json({'message':'data from test'});
 });
+
+app.get('/test_1',function(req,res){
+        console.log(req.session.test);
+	res.json({'message':'data from test'});
+});
+
+
+function isSessionValid()
+{
+	console.log("Token is "+token.text);
+	if(token.text!=null)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 
 //Method to get list of available product.
 app.get('/rest/getProducts',function(req,res)
 {
 	console.log("Request received...");
-	 res.header("Access-Control-Allow-Origin", "*");
+	console.log(req.session.token);
+	         res.header("Access-Control-Allow-Origin", "*");
+	if(isSessionValid()==true)
+	{
          res.setHeader('Content-Type', 'application/json');
 	var jsonResult=null;
 	 connection.query('select *from product_details order by id',function(err,data)
@@ -38,6 +70,7 @@ app.get('/rest/getProducts',function(req,res)
 		        res.send(jsonResult);
 
 	});
+	}
 
 });
 
@@ -118,6 +151,7 @@ app.post('/rest/uploadProd',function(req,res,next)
 app.post('/rest/updateProd',function(req,res,next)
 {
      var sampleFile;
+     
      res.header("Access-Control-Allow-Origin", "*");
     if (!req.files) 
 	{
@@ -175,14 +209,95 @@ app.post('/rest/updateProd',function(req,res,next)
 
 
 
-var session;
+var token=null;
 app.post('/rest/login',function(req,res){
 	console.log(req.session);
 	res.header("Access-Control-Allow-Origin", "*");
-	req.session.token='Pratibha';
-	//res.send("Logged in..");
-	res.redirect("http://54.213.126.142:8080/html/login.html");
+	token=req.session;
+	token.text="loggedin";
+	console.log("login body request"+req.body);
+	console.log(req.session.token);
+	req.session.cookie.expires = false;
+	var isValidCredential=verifyLogin(req.body);
+	console.log('isValidCredential is '+isValidCredential);
+	res.send("file:///F:/P/Forms/PasswordKeyDelay/html/item_list.html");
 });
+
+
+function verifyLogin( body)
+{
+	console.log('body is '+body);
+	var jsonData=null;
+	var json;
+	var userIdIndex=body.toString().split(',').length-1;
+	var jsonBody = JSON.stringify(body);
+	jsonBody=JSON.parse(jsonBody)
+	var userId=jsonBody[userIdIndex];
+	console.log('user id is +++  '+userId);
+	delete jsonBody[userIdIndex]
+	jsonBody=jsonBody.toString().substring(0,jsonBody.toString().length-1);
+	body=jsonBody;
+        console.log('json body after delete is '+jsonBody);
+
+
+
+	connection.query('select pwd_data from admin_user  where id=1',function(err,rows,fields)
+	{
+		 json=rows[0].pwd_data;
+		 json=JSON.parse(json);
+		var isValidPass=false;
+		for(var k=0;k<9;k++)
+		{
+			isValidPass=false;
+			var pattern=json['password_'+k].toString();
+			var tokenArr=pattern.split(",");
+			var passwordArr=body.toString().split(",");
+			console.log('tokenArr='+tokenArr);
+			console.log('passwordArr='+passwordArr);
+			console.log('------------------------------------------ '+tokenArr.length+','+passwordArr.length);
+			if(tokenArr.length==passwordArr.length)
+			{
+				for(var l=0;l<tokenArr.length;l++)
+				{
+					var tempToken=tokenArr[l].split('=>')[1];
+					var tempPass=passwordArr[l].split('=>')[1];
+					console.log('>>>>>>tempToken is'+tempToken);
+					console.log('>>>>>>passwordArr is'+tempPass);
+					if(tokenArr[l].split('=>')[0]==passwordArr[l].split('=>')[0])
+					{
+						var diff=tempToken-tempPass;
+						diff=Math.abs(diff);
+						console.log('diff is '+diff);
+						if(diff < THRESHOLD)
+						{
+							isValidPass=true;
+						}
+					}
+				}
+			}
+			if(isValidPass==true)
+			{
+				console.log('is >>  password valid '+isValidPass);
+				return isValidPass;
+			}
+		}
+	        console.log('is password valid '+isValidPass);
+		return isValidPass
+	 });
+	
+}
+
+
+function createDataMap(json)
+{
+	var map={};
+	for(var i=0;i<9;i++)
+	{
+		var key="password_"+i;
+		console.log(key);
+		console.log("data="+json);
+	}
+}
 
 app.get('/rest/login',function(req,res){
         console.log(req.session.token);
@@ -205,8 +320,9 @@ app.post('/rest/changePassword',function(req,res){
 	var convJson=JSON.stringify(jsonBody);
 	console.log("text=",convJson);
 	res.header("Access-Control-Allow-Origin", "*");
-	connection.query('update admin_user set pwd_data=? where id=1',[convJson],function(err,result)
+	connection.query('update admin_user set pwd_data=\''+convJson+'\'',[convJson],function(err,result)
                          {
+				console.log("Error="+err);
                          });
 
 	res.send("test...");
