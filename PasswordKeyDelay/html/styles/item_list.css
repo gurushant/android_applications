@@ -10,4 +10,11 @@
 			    box-sizing: border-radius;
 			    border: 1px solid blue;
 			    border-radius: 4px;
+		}
+
+.logout {
+    text-align: right;
+    float: right;
+}
 		
+

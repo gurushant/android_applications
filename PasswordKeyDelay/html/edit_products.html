@@ -9,7 +9,7 @@
 		<script type="text/javascript">
 			var app=angular.module("edit_product",[]);
 			var selectedId=null;
-			var serverIpAddress="54.212.228.206";
+			var serverIpAddress="54.149.195.217";
 			//
 			///
 			app.directive('fileModel', ['$parse', function ($parse) {
@@ -36,7 +36,7 @@
                fd.append('price', price);
                fd.append('discount', discount);
                fd.append('id',selectedId);
-            	
+            	console.log("FormData=="+fd);
                $http.post(uploadUrl, fd, {
                   transformRequest: angular.identity,
                   headers: {'Content-Type': undefined}
@@ -87,6 +87,7 @@
 	               var price=$scope.prod_price;
 	               var discount=$scope.prod_discount;		   
 	               console.log('file is ' );
+	       
 	               console.dir(file);
 	       
 	               var uploadUrl = "http://"+serverIpAddress+":9090/rest/updateProd";
@@ -97,11 +98,17 @@
 		</script>
 	</head>
 	<body ng-app="edit_product" ng-controller="edit_prod_list">
+				<a class="logout" ng-href="login.html">Log out</a>
+
 		<div >
-			<select ng-model="selectedData" ng-options="item as item.prod_name for item in items" ng-change="fetchData()">
-			</select>
-		</div>
+					</div>
 		<div class="inner_div">
+			<label>Select Product  &nbsp;&nbsp; </label>
+			<select class="select_product" ng-model="selectedData" ng-options="item as item.prod_name for item in items" ng-change="fetchData()">
+			</select>
+			<br>	
+
+
 			<label>Product Name &nbsp;&nbsp; </label>
 			<input id="prod_name" ng-model="prod_name"  type="text" />
 			<br>
