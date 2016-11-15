@@ -10,3 +10,8 @@ div 	{
     border: 1px solid #ccc;
     background-color: #f3f3f3;
 }
+
+.logout {
+    text-align: right;
+    float: right;
+}

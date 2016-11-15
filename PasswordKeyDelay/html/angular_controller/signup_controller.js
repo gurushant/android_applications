@@ -22,7 +22,7 @@
      if (prevChar != null) {
       endTime = new Date().getTime();
       diff = endTime - startTime;
-      token = prevChar + "," + ch + "=>" + diff
+      token = prevChar + "-" + ch + "=>" + diff
       console.log(token);
       delayArr.push(token);
       console.log(delayArr);

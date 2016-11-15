@@ -23,7 +23,7 @@ loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 					$http.post("http://"+serverIpAddress+":9090/rest/login",JSON.stringify(delayArr, null, 4),config).success(function(data)
 					{
 						console.log(data)
-						//$window.location.href = data;
+						$window.location.href = data;
 					}).
 					error(function(status)
 					{

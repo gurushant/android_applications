@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+	var module=angular.module('test', []);
+	module.controller('test',function($scope)
+	{
+		$scope.dev={};
+		$scope.bob={};
+
+		$scope.dev.firstName="a";
+		$scope.dev.lastName="b";
+		$scope.bob.firstName="x";
+		$scope.bob.lastName="y";
+
+	});
+
+
+module.directive('userinfo',function()
+	{
+		var directive={};
+		
+		directive.restrict='E';
+		directive.template="user is {{user.firstName}}";
+		directive.scope={
+			user:"=user"
+		}	
+
+		directive.compile=function(element,attributes)
+		{
+			element.css("border", "1px solid #cccccc");
+			var linkFuntion=function($scope,element,attributes)
+			{
+	            element.html("This is the new content: " + $scope.firstName);
+                element.css("background-color", "#fff000");
+                return linkFunction;
+			}
+		}
+		return directive;
+	});
+
+
+</script>
+
+
+<body>
+
+<div ng-app="test" ng-controller="test">
+	<userinfo user="dev"></userinfo>
+	<br>
+	<userinfo user="bob"></userinfo>
+
+</div>
+
+</body>
+</html>
+
