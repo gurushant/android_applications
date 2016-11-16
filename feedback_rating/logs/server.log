@@ -730,3 +730,504 @@
 2016-11-15T17:08:20.772Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
 2016-11-15T17:08:20.772Z - info: Checking whether is already received.
 2016-11-15T17:08:20.772Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:45:09.793Z - info: Connecting to the db
+2016-11-16T05:45:09.798Z - info: Succesfully connected to the db
+2016-11-16T05:45:09.805Z - info: Listenening on 9095
+2016-11-16T05:45:13.122Z - info: Posting feedback and rating
+2016-11-16T05:45:13.122Z - info: Recipe array length is 5
+2016-11-16T05:45:13.123Z - info: Rating sum is 15.5
+2016-11-16T05:45:13.123Z - info: Final recipe rating is 3.1
+2016-11-16T05:45:13.123Z - info: Final rating of order id 2.275
+2016-11-16T05:45:13.123Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:45:13.123Z - info: Checking whether is already received.
+2016-11-16T05:45:13.124Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:46:07.845Z - info: Posting feedback and rating
+2016-11-16T05:46:07.845Z - info: Recipe array length is 5
+2016-11-16T05:46:07.846Z - info: Rating sum is 15.5
+2016-11-16T05:46:07.846Z - info: Final recipe rating is 3.1
+2016-11-16T05:46:07.846Z - info: Final rating of order id 2.275
+2016-11-16T05:46:07.846Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:46:07.846Z - info: Checking whether is already received.
+2016-11-16T05:46:07.846Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:49:50.300Z - info: Connecting to the db
+2016-11-16T05:49:50.305Z - info: Succesfully connected to the db
+2016-11-16T05:49:50.310Z - info: Listenening on 9095
+2016-11-16T05:49:55.242Z - info: Posting feedback and rating
+2016-11-16T05:49:55.243Z - info: Recipe array length is 5
+2016-11-16T05:49:55.243Z - info: Rating sum is 15.5
+2016-11-16T05:49:55.243Z - info: Final recipe rating is 3.1
+2016-11-16T05:49:55.243Z - info: Final rating of order id 2.275
+2016-11-16T05:49:55.244Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:49:55.244Z - info: Checking whether is already received.
+2016-11-16T05:49:55.245Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:49:55.248Z - info: Checking whether feedback is already received for this order 200045=>true
+2016-11-16T05:50:29.714Z - info: Posting feedback and rating
+2016-11-16T05:50:29.715Z - info: Recipe array length is 5
+2016-11-16T05:50:29.715Z - info: Rating sum is 15.5
+2016-11-16T05:50:29.715Z - info: Final recipe rating is 3.1
+2016-11-16T05:50:29.715Z - info: Final rating of order id 2.275
+2016-11-16T05:50:29.715Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:50:29.715Z - info: Checking whether is already received.
+2016-11-16T05:50:29.715Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:50:29.718Z - info: Checking whether feedback is already received for this order 200045=>false
+2016-11-16T05:50:32.571Z - info: Posting feedback and rating
+2016-11-16T05:50:32.571Z - info: Recipe array length is 5
+2016-11-16T05:50:32.571Z - info: Rating sum is 15.5
+2016-11-16T05:50:32.571Z - info: Final recipe rating is 3.1
+2016-11-16T05:50:32.571Z - info: Final rating of order id 2.275
+2016-11-16T05:50:32.571Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:50:32.571Z - info: Checking whether is already received.
+2016-11-16T05:50:32.572Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:50:32.573Z - info: Checking whether feedback is already received for this order 200045=>true
+2016-11-16T05:53:57.717Z - info: Connecting to the db
+2016-11-16T05:53:57.721Z - info: Succesfully connected to the db
+2016-11-16T05:53:57.725Z - info: Listenening on 9095
+2016-11-16T05:54:03.361Z - info: Posting feedback and rating
+2016-11-16T05:54:03.362Z - info: Recipe array length is 5
+2016-11-16T05:54:03.362Z - info: Rating sum is 15.5
+2016-11-16T05:54:03.362Z - info: Final recipe rating is 3.1
+2016-11-16T05:54:03.362Z - info: Final rating of order id 2.275
+2016-11-16T05:54:03.362Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:54:03.362Z - info: Checking whether is already received.
+2016-11-16T05:54:03.365Z - info: Checking whether feedback is already received for this order 200045=>false
+2016-11-16T05:54:03.365Z - info: posting feedback and rating insert into email_notification(payload,order_id,restaruent_id,email_sent_time,is_feedback_rating_received) values('{"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}','200045','1',now(),true)
+2016-11-16T05:54:11.451Z - info: Posting feedback and rating
+2016-11-16T05:54:11.451Z - info: Recipe array length is 5
+2016-11-16T05:54:11.451Z - info: Rating sum is 15.5
+2016-11-16T05:54:11.451Z - info: Final recipe rating is 3.1
+2016-11-16T05:54:11.451Z - info: Final rating of order id 2.275
+2016-11-16T05:54:11.451Z - info: Feedback payload is {"order_id":"200045","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T05:54:11.451Z - info: Checking whether is already received.
+2016-11-16T05:54:11.453Z - info: Checking whether feedback is already received for this order 200045=>true
+2016-11-16T06:23:29.668Z - info: Connecting to the db
+2016-11-16T06:23:29.673Z - info: Succesfully connected to the db
+2016-11-16T06:23:29.678Z - info: Listenening on 9095
+2016-11-16T06:23:58.828Z - info: Getting order details of 200045
+2016-11-16T06:24:12.869Z - info: Getting order details of 200045
+2016-11-16T06:25:12.698Z - info: Connecting to the db
+2016-11-16T06:25:12.703Z - info: Succesfully connected to the db
+2016-11-16T06:25:12.708Z - info: Listenening on 9095
+2016-11-16T06:25:21.638Z - info: Getting order details of 200045
+2016-11-16T06:25:33.101Z - info: Getting order details of 2000
+2016-11-16T06:26:55.309Z - info: Connecting to the db
+2016-11-16T06:26:55.314Z - info: Succesfully connected to the db
+2016-11-16T06:26:55.318Z - info: Listenening on 9095
+2016-11-16T06:27:10.769Z - info: Getting order details of 2000
+2016-11-16T06:28:23.631Z - info: Connecting to the db
+2016-11-16T06:28:23.636Z - info: Succesfully connected to the db
+2016-11-16T06:28:23.641Z - info: Listenening on 9095
+2016-11-16T06:31:47.779Z - info: Connecting to the db
+2016-11-16T06:31:47.784Z - info: Succesfully connected to the db
+2016-11-16T06:31:47.789Z - info: Listenening on 9095
+2016-11-16T06:31:51.427Z - info: Getting order details of 2000
+2016-11-16T06:34:40.278Z - info: Connecting to the db
+2016-11-16T06:34:40.283Z - info: Succesfully connected to the db
+2016-11-16T06:34:40.288Z - info: Listenening on 9095
+2016-11-16T06:34:43.965Z - info: Getting order details of 2000
+2016-11-16T06:34:55.616Z - info: Getting order details of 200043
+2016-11-16T07:17:43.763Z - info: Connecting to the db
+2016-11-16T07:17:43.767Z - info: Succesfully connected to the db
+2016-11-16T07:17:43.771Z - error: uncaughtException: feedbackPayload is not defined date=Wed Nov 16 2016 02:17:43 GMT-0500 (EST), pid=1951, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/server.js], rss=34951168, heapTotal=28055552, heapUsed=15120136, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=681827.568771532, trace=[column=23, file=/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js, function=, line=47, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false], stack=[ReferenceError: feedbackPayload is not defined,     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js:47:23),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10)]
+2016-11-16T07:19:52.678Z - info: Connecting to the db
+2016-11-16T07:19:52.683Z - info: Succesfully connected to the db
+2016-11-16T07:19:52.688Z - info: Listenening on 9095
+2016-11-16T07:21:18.188Z - info: Posting feedback and rating
+2016-11-16T07:21:18.188Z - info: Recipe array length is 5
+2016-11-16T07:21:18.188Z - info: Rating sum is 15.5
+2016-11-16T07:21:18.188Z - info: Final recipe rating is 3.1
+2016-11-16T07:21:18.188Z - info: Final rating of order id 2.275
+2016-11-16T07:21:18.189Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:21:18.189Z - info: Checking whether is already received.
+2016-11-16T07:21:18.196Z - error: uncaughtException: Cannot read property 'length' of undefined date=Wed Nov 16 2016 02:21:18 GMT-0500 (EST), pid=1972, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/server.js], rss=36032512, heapTotal=28055552, heapUsed=17082728, loadavg=[0.09814453125, 0.07275390625, 0.06396484375], uptime=682041.993548872, trace=[column=22, file=/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js, function=Query._callback, line=62, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.ErrorPacket, line=94, method=ErrorPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false, column=28, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js, function=, line=109, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=95, method=emit, native=false, column=14, file=_stream_readable.js, function=, line=765, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=92, method=emit, native=false], stack=[TypeError: Cannot read property 'length' of undefined,     at Query._callback (/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js:62:22),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query.ErrorPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:94:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16),     at Socket.<anonymous> (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js:109:28),     at Socket.emit (events.js:95:17),     at Socket.<anonymous> (_stream_readable.js:765:14),     at Socket.emit (events.js:92:17)]
+2016-11-16T07:22:47.619Z - info: Connecting to the db
+2016-11-16T07:22:47.624Z - info: Succesfully connected to the db
+2016-11-16T07:22:47.628Z - info: Listenening on 9095
+2016-11-16T07:22:52.317Z - info: Posting feedback and rating
+2016-11-16T07:22:52.317Z - info: Recipe array length is 5
+2016-11-16T07:22:52.318Z - info: Rating sum is 15.5
+2016-11-16T07:22:52.318Z - info: Final recipe rating is 3.1
+2016-11-16T07:22:52.318Z - info: Final rating of order id 2.275
+2016-11-16T07:22:52.318Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:22:52.318Z - info: Checking whether is already received.
+2016-11-16T07:22:52.318Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' is_feedback_rating_received=true
+2016-11-16T07:22:52.326Z - error: uncaughtException: Cannot read property 'length' of undefined date=Wed Nov 16 2016 02:22:52 GMT-0500 (EST), pid=1999, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/server.js], rss=36548608, heapTotal=29075456, heapUsed=17425912, loadavg=[0.26171875, 0.10498046875, 0.0712890625], uptime=682136.123568979, trace=[column=22, file=/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js, function=Query._callback, line=63, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.ErrorPacket, line=94, method=ErrorPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false, column=28, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js, function=, line=109, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=95, method=emit, native=false, column=14, file=_stream_readable.js, function=, line=765, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=92, method=emit, native=false], stack=[TypeError: Cannot read property 'length' of undefined,     at Query._callback (/home/ec2-user/nodejs/feedback_rating/utils/commonUtils/commonMethods.js:63:22),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query.ErrorPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:94:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16),     at Socket.<anonymous> (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js:109:28),     at Socket.emit (events.js:95:17),     at Socket.<anonymous> (_stream_readable.js:765:14),     at Socket.emit (events.js:92:17)]
+2016-11-16T07:27:31.426Z - info: Connecting to the db
+2016-11-16T07:27:31.430Z - info: Succesfully connected to the db
+2016-11-16T07:27:31.436Z - info: Listenening on 9095
+2016-11-16T07:27:53.384Z - info: Posting feedback and rating
+2016-11-16T07:27:53.385Z - info: Recipe array length is 5
+2016-11-16T07:27:53.385Z - info: Rating sum is 15.5
+2016-11-16T07:27:53.385Z - info: Final recipe rating is 3.1
+2016-11-16T07:27:53.385Z - info: Final rating of order id 2.275
+2016-11-16T07:27:53.385Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:27:53.385Z - info: Checking whether is already received.
+2016-11-16T07:27:53.386Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' is_feedback_rating_received=true
+2016-11-16T07:27:53.389Z - error: Error occured while checking order status=>Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'is_feedback_rating_received=true' at line 1
+2016-11-16T07:27:53.389Z - info: Checking whether feedback is already received for this order 2000=>false
+2016-11-16T07:27:53.389Z - info: Updating email notifications table
+2016-11-16T07:27:53.390Z - info: Emaial notification update query is => update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-16T07:27:53.393Z - error: Error occrued while updating email notification table =>null
+2016-11-16T07:28:54.808Z - info: Connecting to the db
+2016-11-16T07:28:54.813Z - info: Succesfully connected to the db
+2016-11-16T07:28:54.817Z - info: Listenening on 9095
+2016-11-16T07:28:58.193Z - info: Posting feedback and rating
+2016-11-16T07:28:58.193Z - info: Recipe array length is 5
+2016-11-16T07:28:58.193Z - info: Rating sum is 15.5
+2016-11-16T07:28:58.194Z - info: Final recipe rating is 3.1
+2016-11-16T07:28:58.194Z - info: Final rating of order id 2.275
+2016-11-16T07:28:58.194Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:28:58.194Z - info: Checking whether is already received.
+2016-11-16T07:28:58.194Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:28:58.197Z - info: Checking whether feedback is already received for this order 2000=>true
+2016-11-16T07:30:06.916Z - info: Posting feedback and rating
+2016-11-16T07:30:06.916Z - info: Recipe array length is 5
+2016-11-16T07:30:06.916Z - info: Rating sum is 15.5
+2016-11-16T07:30:06.917Z - info: Final recipe rating is 3.1
+2016-11-16T07:30:06.917Z - info: Final rating of order id 2.275
+2016-11-16T07:30:06.917Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:30:06.917Z - info: Checking whether is already received.
+2016-11-16T07:30:06.917Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:30:06.919Z - info: Checking whether feedback is already received for this order 2000=>false
+2016-11-16T07:30:06.920Z - info: Updating email notifications table
+2016-11-16T07:30:06.920Z - info: Emaial notification update query is => update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-16T07:30:06.923Z - error: Error occrued while updating email notification table =>null
+2016-11-16T07:33:18.935Z - info: Connecting to the db
+2016-11-16T07:33:18.941Z - info: Succesfully connected to the db
+2016-11-16T07:33:18.945Z - info: Listenening on 9095
+2016-11-16T07:33:36.577Z - info: Posting feedback and rating
+2016-11-16T07:33:36.577Z - info: Recipe array length is 5
+2016-11-16T07:33:36.577Z - info: Rating sum is 15.5
+2016-11-16T07:33:36.577Z - info: Final recipe rating is 3.1
+2016-11-16T07:33:36.577Z - info: Final rating of order id 2.275
+2016-11-16T07:33:36.578Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:33:36.578Z - info: Checking whether is already received.
+2016-11-16T07:33:36.578Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:33:36.580Z - info: Checking whether feedback is already received for this order 2000=>false
+2016-11-16T07:33:36.580Z - info: Updating email notifications table
+2016-11-16T07:33:36.581Z - info: Email notification update query is => update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-16T07:33:36.585Z - error: Error occrued while updating email notification table =>null
+2016-11-16T07:35:48.761Z - info: Connecting to the db
+2016-11-16T07:35:48.766Z - info: Succesfully connected to the db
+2016-11-16T07:35:48.770Z - info: Listenening on 9095
+2016-11-16T07:37:42.321Z - info: Posting feedback and rating
+2016-11-16T07:37:42.321Z - info: Recipe array length is 5
+2016-11-16T07:37:42.322Z - info: Rating sum is 15.5
+2016-11-16T07:37:42.322Z - info: Final recipe rating is 3.1
+2016-11-16T07:37:42.322Z - info: Final rating of order id 2.275
+2016-11-16T07:37:42.322Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:37:42.322Z - info: Checking whether is already received.
+2016-11-16T07:37:42.322Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:37:42.325Z - info: Checking whether feedback is already received for this order 2000=>false
+2016-11-16T07:37:42.325Z - info: Updating email notifications table
+2016-11-16T07:37:42.326Z - info: Email notification update query is => update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-16T07:37:42.329Z - info: Order update query is=> update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}' where id=2000 and restaruent_id=1
+2016-11-16T07:37:42.330Z - info: Order updated successfully
+2016-11-16T07:38:10.871Z - info: Posting feedback and rating
+2016-11-16T07:38:10.872Z - info: Recipe array length is 5
+2016-11-16T07:38:10.872Z - info: Rating sum is 15.5
+2016-11-16T07:38:10.872Z - info: Final recipe rating is 3.1
+2016-11-16T07:38:10.872Z - info: Final rating of order id 2.275
+2016-11-16T07:38:10.872Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:38:10.872Z - info: Checking whether is already received.
+2016-11-16T07:38:10.872Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:38:10.874Z - info: Checking whether feedback is already received for this order 2000=>true
+2016-11-16T07:40:30.064Z - info: Posting feedback and rating
+2016-11-16T07:40:30.064Z - info: Recipe array length is 5
+2016-11-16T07:40:30.064Z - info: Rating sum is 15.5
+2016-11-16T07:40:30.064Z - info: Final recipe rating is 3.1
+2016-11-16T07:40:30.064Z - info: Final rating of order id 2.275
+2016-11-16T07:40:30.064Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":2.275}
+2016-11-16T07:40:30.065Z - info: Checking whether is already received.
+2016-11-16T07:40:30.065Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:40:30.066Z - info: Checking whether feedback is already received for this order 2000=>true
+2016-11-16T07:41:10.021Z - info: Posting feedback and rating
+2016-11-16T07:41:10.021Z - info: Recipe array length is 5
+2016-11-16T07:41:10.021Z - info: Rating sum is 15.5
+2016-11-16T07:41:10.021Z - info: Final recipe rating is 3.1
+2016-11-16T07:41:10.021Z - info: Final rating of order id NaN
+2016-11-16T07:41:10.021Z - info: Feedback payload is {"order_id":"2000","restaruent_id":"1","email_id":"dev@gmail.com","feedback":"test_feedback","economy":"a","ambience":2,"qos":2,"recipe_rating":[{"a":3},{"b":3},{"c":4},{"d":4},{"e":1.5}],"recipe_overall_rating":3.1,"overall_order_rating":null}
+2016-11-16T07:41:10.021Z - info: Checking whether is already received.
+2016-11-16T07:41:10.021Z - info: email notification check query is=>select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-16T07:41:10.022Z - info: Checking whether feedback is already received for this order 2000=>true
+2016-11-16T07:57:56.266Z - info: Getting order details of 2000
+2016-11-16T08:32:07.967Z - info: Connecting to the db
+2016-11-16T08:32:07.972Z - info: Succesfully connected to the db
+2016-11-16T08:32:07.978Z - info: Listenening on 9095
+2016-11-16T08:32:34.444Z - info: Connecting to the db
+2016-11-16T08:32:34.448Z - info: Succesfully connected to the db
+2016-11-16T08:32:34.453Z - info: Listenening on 9095
+2016-11-16T08:32:46.312Z - info: Connecting to the db
+2016-11-16T08:32:46.317Z - info: Succesfully connected to the db
+2016-11-16T08:32:46.321Z - info: Listenening on 9095
+2016-11-16T08:33:29.184Z - info: Getting order details of 2000
+2016-11-16T08:33:57.417Z - info: Connecting to the db
+2016-11-16T08:33:57.422Z - info: Succesfully connected to the db
+2016-11-16T08:33:57.426Z - info: Listenening on 9095
+2016-11-16T08:34:33.734Z - info: Getting order details of 2000
+2016-11-16T08:34:36.703Z - info: Getting order details of 2000
+2016-11-16T08:34:46.304Z - info: Getting order details of 2000
+2016-11-16T08:35:18.969Z - info: Connecting to the db
+2016-11-16T08:35:18.974Z - info: Succesfully connected to the db
+2016-11-16T08:35:18.979Z - info: Listenening on 9095
+2016-11-16T08:35:23.229Z - info: Getting order details of 2000
+2016-11-16T08:35:44.571Z - info: Connecting to the db
+2016-11-16T08:35:44.576Z - info: Succesfully connected to the db
+2016-11-16T08:35:44.580Z - info: Listenening on 9095
+2016-11-16T08:35:49.535Z - info: Getting order details of 2000
+2016-11-16T08:37:07.072Z - info: Getting order details of 2000
+2016-11-16T08:37:47.230Z - info: Connecting to the db
+2016-11-16T08:37:47.235Z - info: Succesfully connected to the db
+2016-11-16T08:37:47.240Z - info: Listenening on 9095
+2016-11-16T08:37:51.212Z - info: Getting order details of 2000
+2016-11-16T08:37:51.216Z - info: order details of 2000 is [object Object]
+2016-11-16T08:38:59.118Z - info: Connecting to the db
+2016-11-16T08:38:59.123Z - info: Succesfully connected to the db
+2016-11-16T08:38:59.129Z - info: Listenening on 9095
+2016-11-16T08:39:05.087Z - info: Getting order details of 2000
+2016-11-16T08:39:05.091Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:40:37.628Z - info: Getting order details of 2000
+2016-11-16T08:40:37.630Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:40:53.020Z - info: Getting order details of 2000
+2016-11-16T08:40:53.021Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:42:31.838Z - info: Connecting to the db
+2016-11-16T08:42:31.843Z - info: Succesfully connected to the db
+2016-11-16T08:42:31.848Z - info: Listenening on 9095
+2016-11-16T08:42:35.339Z - info: Getting order details of 2000
+2016-11-16T08:42:35.343Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:44:20.278Z - info: Getting order details of 2000
+2016-11-16T08:44:20.280Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:45:02.669Z - info: Getting order details of 2000
+2016-11-16T08:45:02.671Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:46:38.016Z - info: Getting order details of 2000
+2016-11-16T08:46:38.018Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:47:06.871Z - info: Getting order details of 2000
+2016-11-16T08:47:06.872Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:47:15.021Z - info: Getting order details of 2000
+2016-11-16T08:47:15.022Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:47:38.460Z - info: Getting order details of 2000
+2016-11-16T08:47:38.462Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:47:52.052Z - info: Getting order details of 2000
+2016-11-16T08:47:52.053Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:48:14.530Z - info: Getting order details of 2000
+2016-11-16T08:48:14.531Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:48:36.953Z - info: Getting order details of 2000
+2016-11-16T08:48:36.954Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:48:41.787Z - info: Getting order details of 2000
+2016-11-16T08:48:41.788Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:49:00.277Z - info: Getting order details of 2000
+2016-11-16T08:49:00.278Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:53:07.251Z - info: Getting order details of 2000
+2016-11-16T08:53:07.252Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:53:20.066Z - info: Getting order details of 2000
+2016-11-16T08:53:20.066Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:54:40.166Z - info: Getting order details of 2000
+2016-11-16T08:54:40.168Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:54:58.224Z - info: Getting order details of 2000
+2016-11-16T08:54:58.225Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:57:21.139Z - info: Getting order details of 2000
+2016-11-16T08:57:21.141Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:58:27.601Z - info: Getting order details of 2000
+2016-11-16T08:58:27.602Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T08:59:49.305Z - info: Getting order details of 2000
+2016-11-16T08:59:49.306Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:00:24.393Z - info: Getting order details of 2000
+2016-11-16T09:00:24.394Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:00:41.530Z - info: Getting order details of 2000
+2016-11-16T09:00:41.533Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:01:13.561Z - info: Getting order details of 2000
+2016-11-16T09:01:13.562Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:02:08.240Z - info: Getting order details of 2000
+2016-11-16T09:02:08.240Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:02:37.429Z - info: Getting order details of 2000
+2016-11-16T09:02:37.430Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:03:16.866Z - info: Getting order details of 2000
+2016-11-16T09:03:16.867Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:03:47.273Z - info: Getting order details of 2000
+2016-11-16T09:03:47.274Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:04:03.954Z - info: Getting order details of 2000
+2016-11-16T09:04:03.955Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:04:18.138Z - info: Getting order details of 2000
+2016-11-16T09:04:18.139Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:04:39.731Z - info: Getting order details of 2000
+2016-11-16T09:04:39.732Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:04:54.219Z - info: Getting order details of 2000
+2016-11-16T09:04:54.220Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"{\"recipies\": [\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]}","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:10:10.850Z - info: Getting order details of 2000
+2016-11-16T09:10:10.851Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:11:04.319Z - info: Getting order details of 2000
+2016-11-16T09:11:04.322Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:11:20.695Z - info: Getting order details of 2000
+2016-11-16T09:11:20.696Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:12:06.990Z - info: Getting order details of 2000
+2016-11-16T09:12:06.991Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:12:21.432Z - info: Getting order details of 2000
+2016-11-16T09:12:21.433Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:16:08.974Z - info: Connecting to the db
+2016-11-16T09:16:08.979Z - info: Succesfully connected to the db
+2016-11-16T09:16:08.984Z - info: Listenening on 9095
+2016-11-16T09:16:13.907Z - info: Getting order details of 2000
+2016-11-16T09:16:13.911Z - info: order details of 2000 is {"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","overall_rating":5,"recipes_in_orders":"[\"veg dirayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"email_id\": \"dev@gmail.com\", \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"a\": 3}, {\"b\": 3}, {\"c\": 4}, {\"d\": 4}, {\"e\": 1.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.275, \"recipe_overall_rating\": 3.1}","created_on":"2016-11-14T16:24:27.000Z","status":"SUCCESS","message":"Order detail fetched successfully"}
+2016-11-16T09:17:09.332Z - info: Connecting to the db
+2016-11-16T09:17:09.337Z - info: Succesfully connected to the db
+2016-11-16T09:17:09.342Z - info: Listenening on 9095
+2016-11-16T09:17:13.429Z - info: Getting order details of 2000
+2016-11-16T09:17:13.434Z - info: order details of 2000 is [object Object]
+2016-11-16T09:17:33.718Z - info: Getting order details of 2000
+2016-11-16T09:17:33.720Z - info: order details of 2000 is [object Object]
+2016-11-16T09:20:41.148Z - info: Connecting to the db
+2016-11-16T09:20:41.153Z - info: Succesfully connected to the db
+2016-11-16T09:20:41.157Z - info: Listenening on 9095
+2016-11-16T09:20:47.478Z - info: Getting order details of 2000
+2016-11-16T09:20:47.482Z - info: order details of 2000 is [object Object]
+2016-11-16T09:21:08.823Z - info: Connecting to the db
+2016-11-16T09:21:08.828Z - info: Succesfully connected to the db
+2016-11-16T09:21:08.833Z - info: Listenening on 9095
+2016-11-16T09:21:13.270Z - info: Getting order details of 2000
+2016-11-16T09:21:13.275Z - info: order details of 2000 is [object Object]
+2016-11-16T09:23:50.445Z - info: Connecting to the db
+2016-11-16T09:23:50.449Z - info: Succesfully connected to the db
+2016-11-16T09:23:50.455Z - info: Listenening on 9095
+2016-11-16T09:23:57.225Z - info: Getting order details of 2000
+2016-11-16T09:23:57.230Z - info: order details of 2000 is [object Object]
+2016-11-16T09:25:47.916Z - info: Connecting to the db
+2016-11-16T09:25:47.920Z - info: Succesfully connected to the db
+2016-11-16T09:25:47.925Z - info: Listenening on 9095
+2016-11-16T09:25:53.529Z - info: Getting order details of 2000
+2016-11-16T09:25:53.534Z - info: order details of 2000 is [object Object]
+2016-11-16T09:27:46.634Z - info: Getting order details of 2000
+2016-11-16T09:27:46.636Z - info: order details of 2000 is [object Object]
+2016-11-16T09:40:54.329Z - info: Getting order details of 2000
+2016-11-16T09:40:54.330Z - info: order details of 2000 is [object Object]
+2016-11-16T09:41:24.436Z - info: Connecting to the db
+2016-11-16T09:41:24.441Z - info: Succesfully connected to the db
+2016-11-16T09:41:24.445Z - info: Listenening on 9095
+2016-11-16T09:41:30.412Z - info: Getting order details of 2000
+2016-11-16T09:41:30.417Z - info: order details of 2000 is [object Object]
+2016-11-16T09:46:14.816Z - info: Connecting to the db
+2016-11-16T09:46:14.821Z - info: Succesfully connected to the db
+2016-11-16T09:46:14.825Z - info: Listenening on 9095
+2016-11-16T09:46:17.750Z - info: Getting order details of 2000
+2016-11-16T09:46:17.755Z - info: order details of 2000 is [object Object]
+2016-11-16T09:46:28.778Z - info: Getting order details of 2000
+2016-11-16T09:46:28.780Z - info: order details of 2000 is [object Object]
+2016-11-16T09:46:39.821Z - info: Getting order details of 2000
+2016-11-16T09:46:39.822Z - info: order details of 2000 is [object Object]
+2016-11-16T09:48:19.800Z - info: Getting order details of 2000
+2016-11-16T09:48:19.801Z - info: order details of 2000 is [object Object]
+2016-11-16T09:48:30.160Z - info: Getting order details of 2000
+2016-11-16T09:48:30.161Z - info: order details of 2000 is [object Object]
+2016-11-16T09:48:55.086Z - info: Getting order details of 2000
+2016-11-16T09:48:55.088Z - info: order details of 2000 is [object Object]
+2016-11-16T09:49:02.860Z - info: Getting order details of 2000
+2016-11-16T09:49:02.861Z - info: order details of 2000 is [object Object]
+2016-11-16T09:49:24.740Z - info: Getting order details of 2000
+2016-11-16T09:49:24.741Z - info: order details of 2000 is [object Object]
+2016-11-16T09:49:37.639Z - info: Getting order details of 2000
+2016-11-16T09:49:37.640Z - info: order details of 2000 is [object Object]
+2016-11-16T09:49:50.119Z - info: Getting order details of 2000
+2016-11-16T09:49:50.121Z - info: order details of 2000 is [object Object]
+2016-11-16T09:50:32.220Z - info: Getting order details of 2000
+2016-11-16T09:50:32.221Z - info: order details of 2000 is [object Object]
+2016-11-16T09:50:47.809Z - info: Getting order details of 2000
+2016-11-16T09:50:47.810Z - info: order details of 2000 is [object Object]
+2016-11-16T09:51:03.251Z - info: Getting order details of 2000
+2016-11-16T09:51:03.252Z - info: order details of 2000 is [object Object]
+2016-11-16T09:51:10.492Z - info: Getting order details of 2000
+2016-11-16T09:51:10.493Z - info: order details of 2000 is [object Object]
+2016-11-16T09:52:15.374Z - info: Getting order details of 2000
+2016-11-16T09:52:15.375Z - info: order details of 2000 is [object Object]
+2016-11-16T09:52:38.471Z - info: Getting order details of 2000
+2016-11-16T09:52:38.472Z - info: order details of 2000 is [object Object]
+2016-11-16T09:55:00.554Z - info: Getting order details of 2000
+2016-11-16T09:55:00.555Z - info: order details of 2000 is [object Object]
+2016-11-16T09:55:42.832Z - info: Getting order details of 2000
+2016-11-16T09:55:42.835Z - info: order details of 2000 is [object Object]
+2016-11-16T09:55:55.664Z - info: Getting order details of 2000
+2016-11-16T09:55:55.665Z - info: order details of 2000 is [object Object]
+2016-11-16T09:56:17.675Z - info: Getting order details of 2000
+2016-11-16T09:56:17.676Z - info: order details of 2000 is [object Object]
+2016-11-16T09:56:34.081Z - info: Getting order details of 2000
+2016-11-16T09:56:34.083Z - info: order details of 2000 is [object Object]
+2016-11-16T10:02:50.418Z - info: Getting order details of 2000
+2016-11-16T10:02:50.419Z - info: order details of 2000 is [object Object]
+2016-11-16T10:03:46.226Z - info: Getting order details of 2000
+2016-11-16T10:03:46.228Z - info: order details of 2000 is [object Object]
+2016-11-16T10:04:06.381Z - info: Getting order details of 2000
+2016-11-16T10:04:06.382Z - info: order details of 2000 is [object Object]
+2016-11-16T10:05:44.301Z - info: Getting order details of 2000
+2016-11-16T10:05:44.302Z - info: order details of 2000 is [object Object]
+2016-11-16T10:07:27.691Z - info: Getting order details of 2000
+2016-11-16T10:07:27.692Z - info: order details of 2000 is [object Object]
+2016-11-16T10:08:29.789Z - info: Getting order details of 2000
+2016-11-16T10:08:29.790Z - info: order details of 2000 is [object Object]
+2016-11-16T10:10:14.894Z - info: Getting order details of 2000
+2016-11-16T10:10:14.895Z - info: order details of 2000 is [object Object]
+2016-11-16T10:11:37.534Z - info: Getting order details of 2000
+2016-11-16T10:11:37.535Z - info: order details of 2000 is [object Object]
+2016-11-16T10:12:10.713Z - info: Getting order details of 2000
+2016-11-16T10:12:10.714Z - info: order details of 2000 is [object Object]
+2016-11-16T10:13:15.663Z - info: Getting order details of 2000
+2016-11-16T10:13:15.664Z - info: order details of 2000 is [object Object]
+2016-11-16T10:36:37.205Z - info: Connecting to the db
+2016-11-16T10:36:37.210Z - info: Succesfully connected to the db
+2016-11-16T10:36:37.215Z - info: Listenening on 9095
+2016-11-16T10:37:08.038Z - info: Getting order details of 2000
+2016-11-16T10:37:08.043Z - info: order details of 2000 is [object Object]
+2016-11-16T10:38:25.304Z - info: Getting order details of 2000
+2016-11-16T10:38:25.306Z - info: order details of 2000 is [object Object]
+2016-11-16T10:39:46.146Z - info: Getting order details of 2000
+2016-11-16T10:39:46.147Z - info: order details of 2000 is [object Object]
+2016-11-16T10:41:28.483Z - info: Getting order details of 2000
+2016-11-16T10:41:28.484Z - info: order details of 2000 is [object Object]
+2016-11-16T10:42:38.747Z - info: Getting order details of 2000
+2016-11-16T10:42:38.748Z - info: order details of 2000 is [object Object]
+2016-11-16T10:45:27.494Z - info: Getting order details of 2000
+2016-11-16T10:45:27.495Z - info: order details of 2000 is [object Object]
+2016-11-16T10:45:53.198Z - info: Getting order details of 2000
+2016-11-16T10:45:53.200Z - info: order details of 2000 is [object Object]
+2016-11-16T10:46:16.440Z - info: Getting order details of 2000
+2016-11-16T10:46:16.441Z - info: order details of 2000 is [object Object]
+2016-11-16T10:50:07.176Z - info: Getting order details of 2000
+2016-11-16T10:50:07.177Z - info: order details of 2000 is [object Object]
+2016-11-16T10:51:43.890Z - info: Getting order details of 2000
+2016-11-16T10:51:43.892Z - info: order details of 2000 is [object Object]
+2016-11-16T10:54:09.556Z - info: Getting order details of 2000
+2016-11-16T10:54:09.557Z - info: order details of 2000 is [object Object]
+2016-11-16T10:54:59.710Z - info: Getting order details of 2000
+2016-11-16T10:54:59.712Z - info: order details of 2000 is [object Object]
+2016-11-16T10:55:27.146Z - info: Getting order details of 2000
+2016-11-16T10:55:27.148Z - info: order details of 2000 is [object Object]
+2016-11-16T10:55:55.524Z - info: Getting order details of 2000
+2016-11-16T10:55:55.525Z - info: order details of 2000 is [object Object]
+2016-11-16T10:56:37.313Z - info: Getting order details of 2000
+2016-11-16T10:56:37.314Z - info: order details of 2000 is [object Object]
+2016-11-16T11:00:21.881Z - info: Getting order details of 2000
+2016-11-16T11:00:21.882Z - info: order details of 2000 is [object Object]
+2016-11-16T11:03:37.613Z - info: Getting order details of 2000
+2016-11-16T11:03:37.614Z - info: order details of 2000 is [object Object]
+2016-11-16T11:04:29.459Z - info: Getting order details of 2000
+2016-11-16T11:04:29.462Z - info: order details of 2000 is [object Object]
+2016-11-16T11:07:24.467Z - info: Getting order details of 2000
+2016-11-16T11:07:24.468Z - info: order details of 2000 is [object Object]
+2016-11-16T11:12:00.065Z - info: Getting order details of 2000
+2016-11-16T11:12:00.066Z - info: order details of 2000 is [object Object]
+2016-11-16T11:16:16.383Z - info: Getting order details of 2000
+2016-11-16T11:16:16.384Z - info: order details of 2000 is [object Object]
+2016-11-16T11:21:16.806Z - info: Getting order details of 2000
+2016-11-16T11:21:16.808Z - info: order details of 2000 is [object Object]
+2016-11-16T11:23:41.055Z - info: Getting order details of 2000
+2016-11-16T11:23:41.056Z - info: order details of 2000 is [object Object]
+2016-11-16T11:25:18.769Z - info: Getting order details of 2000
+2016-11-16T11:25:18.770Z - info: order details of 2000 is [object Object]
+2016-11-16T11:43:21.355Z - info: Getting order details of 2000
+2016-11-16T11:43:21.356Z - info: order details of 2000 is [object Object]
+2016-11-16T11:43:47.364Z - info: Getting order details of 2000
+2016-11-16T11:43:47.365Z - info: order details of 2000 is [object Object]
+2016-11-16T11:45:40.577Z - info: Getting order details of 2000
+2016-11-16T11:45:40.579Z - info: order details of 2000 is [object Object]
+2016-11-16T11:46:49.831Z - info: Getting order details of 2000
+2016-11-16T11:46:49.832Z - info: order details of 2000 is [object Object]
+2016-11-16T11:47:13.333Z - info: Getting order details of 2000
+2016-11-16T11:47:13.334Z - info: order details of 2000 is [object Object]
+2016-11-16T11:47:30.311Z - info: Getting order details of 2000
+2016-11-16T11:47:30.312Z - info: order details of 2000 is [object Object]
