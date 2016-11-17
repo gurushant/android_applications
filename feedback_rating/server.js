@@ -60,17 +60,20 @@ app.get('/orders/getOrderDetail',function(req,res)
 		if(rows.length==1){
 			response=rows[0];
 			response=JSON.stringify(response);
-		        console.log('response >>>>>>>>>>>>'+response.toString());
+		        logger.debug('Response of get order details is =>'+response.toString());
 			response=JSON.parse(response);
 			response.status='SUCCESS';
 			response.message='Order detail fetched successfully';
-//			response=JSON.stringify(response);
-			logger.info('order details of '+orderId+' is '+response);
 		}
 		else
 		{	//If order does not exist in database
 			logger.debug('Order does not exist =>'+orderId);
-			response="{ \"status\":\"SUCCESS\", \"message\":\"Order not found\"}";	
+			var response={};
+			response.message='Order not found';
+			response.status='SUCCESS';
+			response=JSON.stringify(response);
+			response=JSON.parse(response);
+ 
 		}
 		res.json(response);
 	});	
