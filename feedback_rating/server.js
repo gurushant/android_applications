@@ -14,6 +14,10 @@ app.use(bodyParser());
 */
 var logger = require("./utils/logger/logger");
 
+
+
+var ERROR_MSG="{ \"status\":\"ERROR\", \"message\":\"Error occured.Please try again\"}";
+
 /*
 *Following line executes 
 */
@@ -36,20 +40,27 @@ app.listen(PORT_NO,function(){
 
  /**
  *This function is for
- * 1.To fetch order details by calling method from common utils.
- * 2.If order does not exist then respond with appropriate message.  
+ * 1.To fetch order details by calling method from CommonUtils.js.
+ * 2.If order does not exist then it respond with appropriate message.  
  */
 app.get('/orders/getOrderDetail',function(req,res)
 {
 	var orderId=req.query.order_id;
+	var restId=req.query.restaruent_id;
 	logger.info('Getting order details of '+orderId);
 	res.header("Access-Control-Allow-Origin", "*");
-	commonUtils.getOrderDetail(orderId,function(rows){
+	commonUtils.getOrderDetail(orderId,restId,function(err,rows){
 		var response=null;
+		if(err!=null)
+		{
+			logger.error('Error occured while fetching order details.Error is =>'+err);
+			response=ERROR_MSG;
+		}
+		else
 		if(rows.length==1){
 			response=rows[0];
-			console.log('response >>>>>>>>>>>>'+response.toString());
 			response=JSON.stringify(response);
+		        console.log('response >>>>>>>>>>>>'+response.toString());
 			response=JSON.parse(response);
 			response.status='SUCCESS';
 			response.message='Order detail fetched successfully';
@@ -59,7 +70,7 @@ app.get('/orders/getOrderDetail',function(req,res)
 		else
 		{	//If order does not exist in database
 			logger.debug('Order does not exist =>'+orderId);
-			response="{ \"status\":\"ERROR\", \"message\":\"Order not found\"}";	
+			response="{ \"status\":\"SUCCESS\", \"message\":\"Order not found\"}";	
 		}
 		res.json(response);
 	});	
@@ -76,7 +87,8 @@ app.get('/orders/getOrderDetail',function(req,res)
 
 app.post('/review/post_feedback',function(req,res)
 {	
-	logger.debug('Feedback request detail=>'+req.body);
+        res.header("Access-Control-Allow-Origin", "*");
+	logger.info('Feedback request detail=>'+req.body);
 	logger.info('Posting feedback and rating');
 	var orderId=req.body.order_id;
 	var restaurantId=req.body.restaruent_id;
@@ -92,23 +104,41 @@ app.post('/review/post_feedback',function(req,res)
 	//Sum of all recipies in order.
 	for(var k=0;k <receipeLength;k++)
 	{
+		console.log(parseFloat(JSON.stringify(recipeArray[k]).split(':')[1].replace('}','')));
 		ratingSum+=parseFloat(JSON.stringify(recipeArray[k]).split(':')[1].replace('}',''));
 	}
-	logger.info('Rating sum is '+ratingSum);
+	logger.debug('Rating sum is '+ratingSum);
 	//Calculating overall rating of recipes in order
 	var overallRecipeRating=ratingSum/receipeLength;
+	logger.debug('Rounding up recipe rating');
+	overallRecipeRating= commonUtils.roundUpRating(overallRecipeRating);
+	logger.debug('Rounded recipe rating is '+overallRecipeRating);
+
 	//Calculating overall rating of an order.
 	var overAllRating=(overallRecipeRating+parseFloat(economy)+parseFloat(ambience)+parseFloat(qos))/4;
-	logger.info('Final recipe rating is '+overallRecipeRating);
-	logger.info('Final rating of order id '+overAllRating);
-	req.body.recipe_overall_rating=overallRecipeRating;
+
+	//Rounding up over all rating
+	logger.debug('Rounding up overall  rating.Wihout rounding is '+overAllRating);
+        overAllRating= commonUtils.roundUpRating(overAllRating);
+        logger.debug('Rounded overall rating is '+overAllRating);
+
+	logger.debug('Final recipe rating is '+overallRecipeRating);
+	logger.debug('Final rating of order id '+overAllRating);
+	req.body.overall_recipe_rating=overallRecipeRating;
 	req.body.overall_order_rating=overAllRating;
 	var feedbackPayload=JSON.stringify(req.body);
-	logger.info('Feedback payload is '+feedbackPayload);
+	logger.debug('Feedback payload is '+feedbackPayload);
 	//Checking whether order has already recived feedback and rating .
-	logger.info('Checking whether is already received.');
+	logger.debug('Checking whether order has already received feedback.');
 	commonUtils.checkFeedbackExist(orderId,restaurantId,function(err,response){
-		logger.info('Checking whether feedback is already received for this order '+orderId+'=>'+response);
+		logger.debug('Checking whether feedback is already received for this order '+orderId+'=>'+response);
+		if(err!=null)
+		{
+			response=ERROR_MSG;
+			res.json(response);
+		}
+		else
+		{
 		//If order does not have feedback and rating recived.This is the first time.
 		if(response==false)
 		{
@@ -123,28 +153,32 @@ app.post('/review/post_feedback',function(req,res)
 					{
 						if(err!=null)
 						{
-							logger.error('Error occured while updating orders table =>'+err);
-							 res.json("{ \"status\": \"error\", \"message\": \"Error occured while updating feedback and rating.\" }");
+							logger.error('Error occured while updating orders table =>'+err.toString());
+							response="{ \"status\": \"ERROR\", \"message\": \"Error occured while updating feedback and rating.\" }";
 						}
 						else
 						{
 							logger.info('Order updated successfully');
-			         			 res.json("{ \"status\": \"success\", \"message\": \"Feedback updated successfully.\" }");
+			         			response="{ \"status\": \"SUCCESS\", \"message\": \"Feedback updated successfully.\" }";
+					
 						}
+						 res.json(response);
 					});
 				}
 				else
 				{
 					logger.error('Error occrued while updating email notification table =>'+err);	
-					res.json("{ \"status\": \"error\", \"message\": \"Error occured while updating feedback and rating.\" }");
+					response="{ \"status\": \"ERROR\", \"message\": \"Error occured while updating feedback and rating.\" }";
+					 res.json(response);
 				}
 
 			});	
 		}
 		else
 		{
-			        res.json("{ \"status\": \"success\", \"message\": \"Feedback already exist for this order\" }");
-	
+			        response="{ \"status\": \"SUCCESS\", \"message\": \"Feedback already exist for this order\" }";
+				 res.json(response);	
+		}
 		}
 	
 	});	

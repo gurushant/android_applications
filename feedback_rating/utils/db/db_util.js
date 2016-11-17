@@ -20,11 +20,13 @@ exports.getDbConnection=function()
 	});
 	logger.info('Connecting to the db');
 	connection.connect();
-	logger.info('Succesfully connected to the db');
+	logger.debug('Database connection object is '+connection);
 	return connection;
 };
 
-
+/**
+* Function to close database connection
+*/
 exports.dbConClose=function(connection)
 {
 	connection.end();
