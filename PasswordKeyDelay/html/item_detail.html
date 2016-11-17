@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/item_detail.css"/>
+		<script type="text/javascript">
+			moduleApp=angular.module("item_detail_app",[]);
+
+			///
+			moduleApp.directive('fileModel', ['$parse', function ($parse) {
+            return {
+               restrict: 'A',
+               link: function(scope, element, attrs) {
+                  var model = $parse(attrs.fileModel);
+                  var modelSetter = model.assign;
+                  
+                  element.bind('change', function(){
+                     scope.$apply(function(){
+                        modelSetter(scope, element[0].files[0]);
+                     });
+                  });
+               }
+            };
+         }]);
+		///
+		     moduleApp.service('fileUpload', ['$http', function ($http) {
+            this.uploadFileToUrl = function(file, uploadUrl,name,price,discount){
+               var fd = new FormData();
+               fd.append('file', file);
+               fd.append('name', name);
+               fd.append('price', price);
+               fd.append('discount', discount);
+            	
+               $http.post(uploadUrl, fd, {
+                  transformRequest: angular.identity,
+                  headers: {'Content-Type': undefined}
+               })
+            
+               .success(function(){
+               })
+            
+               .error(function(){
+               });
+            }
+         }]);
+      
+		////
+		 moduleApp.controller('item_controller', ['$scope', 'fileUpload', function($scope, fileUpload){
+            $scope.doUpload = function(){
+               var file = $scope.myFile;
+               var name=$scope.prod_name;
+               var price=$scope.prod_price;
+               var discount=$scope.prod_discount;		   
+               console.log('file is ' );
+               console.dir(file);
+               
+               var uploadUrl = "http://54.149.195.217:9090/rest/uploadProd";
+               fileUpload.uploadFileToUrl(file, uploadUrl,name,price,discount);
+            };
+
+            
+         }]);		
+
+
+		///
+		
+		</script>
+	</head>
+	<body ng-app="item_detail_app">
+		<div  ng-controller="item_controller">
+			<div class="inner_div">
+			<label>Product Name &nbsp;&nbsp; </label>
+			<input id="prod_name" ng-model="prod_name"  type="text" />
+			<br>
+			<label>Product Price &nbsp;&nbsp;<label>
+			<input id="prod_price" ng-model="prod_price"   type="number"/>
+			<br>
+			<label>Discount in (%)</label>
+			<input id="prod_discount" ng-model="prod_discount" type="number"/>
+			<br>
+
+			<label>Product Image&nbsp;</label>
+         	<input type = "file"  file-model = "myFile"/>
+        		<br>
+			<input id="upload_prod" class="upload_button" type="button" ng-click="doUpload()"  value="Upload Product"/>
+
+			</div>
+		</div>
+	</body>
+</html>

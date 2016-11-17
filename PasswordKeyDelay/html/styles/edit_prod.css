@@ -1,0 +1,17 @@
+div 	{
+    position:fixed;
+    top: 30%;
+    left: 50%;
+    width:60em;
+    text-align: center;
+    height:25em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -30em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+.logout {
+    text-align: right;
+    float: right;
+}

@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/edit_prod.css"/>
+		<script type="text/javascript">
+			var app=angular.module("edit_product",[]);
+			app.controller("edit_prod_list",function($scope,$http)
+			{
+				$scope.names = ["Emil", "Tobias", "Linus"];
+				$http.get("http://54.213.126.142:9090/rest/getProdId",function(response)
+				{
+				    
+
+				});
+			});
+		</script>
+	</head>
+	<body ng-app="edit_product">
+		<div ng-controller="edit_prod_list">
+			<select ng-model="selectedName" ng-options="x for x in names">
+			</select>
+		</div>
+	</body>
+</html>

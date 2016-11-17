@@ -1,0 +1,49 @@
+2016-11-17T09:42:34.185Z - info: Connecting to the db
+2016-11-17T09:42:34.194Z - info: Listenening on 9095
+2016-11-17T09:42:51.288Z - info: Getting order details of 2000
+2016-11-17T09:42:51.292Z - error: Error occured while fetching order details.Error is =>Error: ER_NO_SUCH_TABLE: Table 'feedback_rating.orders1' doesn't exist
+2016-11-17T09:44:04.347Z - info: Connecting to the db
+2016-11-17T09:44:04.356Z - info: Listenening on 9095
+2016-11-17T09:44:08.700Z - info: Getting order details of 2000
+2016-11-17T09:44:08.705Z - error: Error occured while fetching order details.Error is =>Error: ER_NO_SUCH_TABLE: Table 'feedback_rating.orders1' doesn't exist
+2016-11-17T09:44:55.706Z - info: Connecting to the db
+2016-11-17T09:44:55.715Z - info: Listenening on 9095
+2016-11-17T09:45:02.320Z - info: Getting order details of 2000
+2016-11-17T09:45:02.325Z - info: order details of 2000 is [object Object]
+2016-11-17T09:45:20.011Z - info: Feedback request detail=>[object Object]
+2016-11-17T09:45:20.011Z - info: Posting feedback and rating
+2016-11-17T09:45:20.011Z - info: Recipe array length is 2
+2016-11-17T09:45:20.014Z - info: Updating email notifications table
+2016-11-17T09:45:20.018Z - info: Order updated successfully
+2016-11-17T09:46:29.055Z - info: Connecting to the db
+2016-11-17T09:46:29.064Z - info: Listenening on 9095
+2016-11-17T09:47:12.210Z - info: Getting order details of 2000
+2016-11-17T09:47:12.215Z - info: order details of 2000 is [object Object]
+2016-11-17T09:47:23.249Z - info: Feedback request detail=>[object Object]
+2016-11-17T09:47:23.249Z - info: Posting feedback and rating
+2016-11-17T09:47:23.249Z - info: Recipe array length is 1
+2016-11-17T09:47:23.251Z - info: Updating email notifications table
+2016-11-17T09:47:23.257Z - info: Order updated successfully
+2016-11-17T09:52:00.931Z - info: Connecting to the db
+2016-11-17T09:52:00.942Z - error: uncaughtException: listen EADDRINUSE date=Thu Nov 17 2016 04:52:00 GMT-0500 (EST), pid=5326, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/server.js], rss=35127296, heapTotal=28055552, heapUsed=15356536, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=777484.740354814, trace=[column=11, file=net.js, function=errnoException, line=905, method=null, native=false, column=14, file=net.js, function=Server._listen2, line=1043, method=_listen2, native=false, column=10, file=net.js, function=listen, line=1065, method=null, native=false, column=5, file=net.js, function=Server.listen, line=1139, method=listen, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/express/lib/application.js, function=EventEmitter.listen, line=617, method=listen, native=false, column=5, file=/home/ec2-user/nodejs/feedback_rating/server.js, function=, line=35, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false], stack=[Error: listen EADDRINUSE,     at errnoException (net.js:905:11),     at Server._listen2 (net.js:1043:14),     at listen (net.js:1065:10),     at Server.listen (net.js:1139:5),     at EventEmitter.listen (/home/ec2-user/nodejs/feedback_rating/node_modules/express/lib/application.js:617:24),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/server.js:35:5),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12)]
+2016-11-17T09:52:21.775Z - info: Connecting to the db
+2016-11-17T09:52:21.786Z - info: Listenening on 9095
+2016-11-17T09:52:29.292Z - info: Getting order details of 2000
+2016-11-17T09:52:29.297Z - info: order details of 2000 is [object Object]
+2016-11-17T09:52:52.261Z - info: Feedback request detail=>[object Object]
+2016-11-17T09:52:52.261Z - info: Posting feedback and rating
+2016-11-17T09:52:52.262Z - info: Recipe array length is 1
+2016-11-17T09:52:52.264Z - info: Updating email notifications table
+2016-11-17T09:52:52.268Z - info: Order updated successfully
+2016-11-17T09:53:12.690Z - info: Feedback request detail=>[object Object]
+2016-11-17T09:53:12.690Z - info: Posting feedback and rating
+2016-11-17T09:53:12.690Z - info: Recipe array length is 1
+2016-11-17T09:53:19.293Z - info: Getting order details of 2000
+2016-11-17T09:59:30.707Z - info: Connecting to the db
+2016-11-17T09:59:30.716Z - info: Listenening on 9095
+2016-11-17T09:59:34.084Z - info: Getting order details of 2000
+2016-11-17T09:59:57.192Z - info: Getting order details of 2000
+2016-11-17T10:01:13.007Z - info: Getting order details of 2000
+2016-11-17T10:01:34.595Z - info: Getting order details of 2000
+2016-11-17T10:02:01.083Z - info: Getting order details of 2000
+2016-11-17T10:02:11.522Z - info: Getting order details of 2000

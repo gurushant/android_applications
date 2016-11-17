@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+	module=angular.module('item_list', []);
+	module.controller('items',function($scope,$http)
+	{
+		$scope.addRow=function()
+		{
+			console.log("Hitting request...");
+			$http.get("http://54.213.126.142:9090/rest/getProducts").success(function(res)
+		    {
+				      var prodCount=res.length;
+				      console.log("Size of reqponse is "+prodCount);
+				      tempCount=prodCount/4;
+				    var rowCount=Math.trunc(tempCount);
+				    if((tempCount-rowCount)>0)
+				    {
+				    	rowCount=rowCount+1;
+				    } 
+				    console.log("Row Count "+rowCount);
+				    var table = document.getElementById("items");
+				    var i=0;
+				    for(var k=0;k<rowCount;k++)
+				    {
+					    var row = table.insertRow(0);
+					    for(;i<prodCount;i++)
+					    {
+					   		var cell = row.insertCell(0);
+					   		var img = document.createElement('img');
+					   		img.style.height = '130px';
+  						    img.style.width = '90%';
+    						var prod=res[i];	
+    						img.src ='http://54.213.126.142:8080/'+prod.prod_image_path;
+    						cell.appendChild(img);
+					    } 
+
+					}
+			    }).
+			    error(function(status)
+			    {
+			      
+			    });
+
+		    
+		}
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="styles/table.css"/>
+</head>
+	<body ng-app="item_list">
+		<input type="button" class="add_item_button" value="Add Row" ng-controller="items" ng-click="addRow()"/> 
+		<div>
+			<table id="items" ng-controller="items">
+			</table>
+			
+		</div>
+	</body>
+</html>

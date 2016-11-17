@@ -1,0 +1,101 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/item_list.css"/>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+	module=angular.module('item_list', []);
+	module.controller('items',function($scope,$http,$window)
+	{
+		var serverIpAddress="54.149.195.217";
+		
+			console.log("Hitting request...");
+			$http.get("http://"+serverIpAddress+":9090/rest/getProducts").success(function(res)
+		    {
+				      var prodCount=res.length;
+				      console.log("Size of reqponse is "+prodCount);
+				      tempCount=prodCount/4;
+				    var rowCount=Math.trunc(tempCount);
+				    if((tempCount-rowCount)>0)
+				    {
+				    	rowCount=rowCount+1;
+				    } 
+				    console.log("Row Count "+rowCount);
+				    var table = document.getElementById("items");
+				    var i=0;
+				    for(var k=0;k<rowCount;k++)
+				    {
+				    	console.log("adding row");
+					    var row = table.insertRow(0);
+					    for(;i<prodCount;i++)
+					    {
+					   		var cell = row.insertCell(0);
+					   		cell.style.padding="6px"
+					   		var img = document.createElement('img');
+					   		img.style.height = '130px';
+  						    img.style.width = '130px';
+    						var prod=res[i];
+    						//setting up product image.	
+    						img.src ="http://"+serverIpAddress+":8080/"+prod.prod_image_path;
+    						cell.appendChild(img);
+    						var labelName=document.createElement('label');
+    						labelName.setAttribute('id',prod.id);
+    						labelName.innerHTML = '<b><font size="4" color="blue">'+prod.prod_name+'</font></b>';
+    						var linebreak = document.createElement("br");
+							cell.appendChild(linebreak);
+    						cell.appendChild(labelName);
+
+
+
+    						//calculating discount
+    						var price=parseInt(prod.prod_price);
+    						var discount=parseFloat(prod.prod_discount);
+    						var discountPrice=(price*discount/100);
+							var labelDiscountPrice=document.createElement('label');
+    						labelDiscountPrice.setAttribute('id',prod.prod_discount);
+    						labelDiscountPrice.innerHTML = '<b><font size="4" color="green">₹'+discountPrice+'</font></b>';
+    						linebreak = document.createElement("br");
+							cell.appendChild(linebreak);
+    						cell.appendChild(labelDiscountPrice);
+
+
+    						//setting up actual price	
+    						var labelPrice=document.createElement('label');
+    						labelPrice.setAttribute('id',prod.prod_price);
+    						labelPrice.innerHTML = '<b><font size="4" color="orange">₹'+prod.prod_price+'</font></b>';
+    						labelPrice.style.textDecoration ="line-through";
+    						linebreak = document.createElement("br");
+							cell.appendChild(linebreak);
+    						cell.appendChild(labelPrice);
+    							
+
+
+ 					    } 
+
+					}
+			    }).
+			    error(function(status)
+			    {
+			      
+			    });
+
+		$scope.openEditProduct=function()
+								{
+									console.log('test');
+									$window.location.href="edit_products.html";
+								}
+		
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="styles/table.css"/>
+</head>
+	<body ng-app="item_list" ng-controller="items">
+		<a class="logout" ng-href="login.html">Log out</a>
+		<input type="button" class="edit_product" ng-click="openEditProduct()" id="login" value="Edit Products"/>	
+		<div>
+			<table id="items" >
+			</table>
+			
+		</div>
+	</body>
+</html>

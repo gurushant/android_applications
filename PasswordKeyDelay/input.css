@@ -1,0 +1,74 @@
+div 	{
+				width: 50%;
+				height: 50%;
+			    position: absolute;
+			    top:0;
+			    text-align: center;
+			    display: inline-block;
+			    vertical-align: middle;
+			    border: 1px solid blue;	
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+		}
+
+.div_login 	{
+				width: 50%;
+				height: 50%;
+			    margin-bottom: 10%;
+			    text-align: right;
+			    border: 1px solid blue;	 	
+			    margin: auto;
+		}
+
+
+input[type=text] 
+		{
+			    width: 50%;
+			    padding: 12px 20px;
+			    margin: 8px 0;
+			    margin-top: 10%;
+			    align:center;
+			    box-sizing: border-radius;
+			    border: 1px solid blue;
+			    border-radius: 4px;
+		}
+
+.login_button 
+		{
+			    width: 20%;
+			    padding: 12px 20px;
+			    margin: 8px;
+			    margin-top: 1%;
+			    margin-left: 8%;
+			    align:center;
+			    box-sizing: border-radius;
+			    border: 1px solid blue;
+			    border-radius: 4px;
+		}
+
+.login_cancel 
+		{
+			    width: 20%;
+			    padding: 12px 20px;
+			    margin: 8px;
+			    margin-top: 1%;
+			    margin-left: 10%;
+			    align:center;
+			    box-sizing: border-radius;
+			    border: 1px solid blue;
+			    border-radius: 4px;
+		}
+
+
+input[type=password] 
+		{
+			    width: 50%;
+			    padding: 12px 20px;
+			    margin: 8px 0;
+			    align:cente;
+			    box-sizing: border-radius;
+			    border: 1px solid blue;
+			    border-radius: 4px;
+		}

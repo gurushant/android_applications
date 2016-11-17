@@ -1,0 +1,20 @@
+
+.edit_product 
+		{
+			    width: 20%;
+			    padding: 12px 20px;
+			    margin: 8px;
+			    margin-top: 5%;
+			    margin-left: 40%;
+			    align:center;
+			    box-sizing: border-radius;
+			    border: 1px solid blue;
+			    border-radius: 4px;
+		}
+
+.logout {
+    text-align: right;
+    float: right;
+}
+		
+

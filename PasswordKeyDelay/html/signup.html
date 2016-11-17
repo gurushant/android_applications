@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+</style>
+<link rel="stylesheet" type="text/css" href="styles/signup.css"/>
+	<script src="angular_controller/signup_controller.js" type="text/javascript">
+	</script>
+</head>
+	<body ng-app="signup">
+	<div ng-app="signup" >
+	<label id="lbl_password"><font size="5">TestTT</font></label>
+	<br>
+	<label id"lbl_user">TESTT</label>	
+	<input id="existing_password" ng-controller="signup_controller"  type="password" required/>
+	<br>
+	<label id"lbl_password_0">Pattern 0</label>
+	<input type="password" ng-controller="signup_controller"  id="password_0" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_1">Pattern 1</label>
+	<input type="password" id="password_1" ng-controller="signup_controller"  id="password_0" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_2">Pattern 2</label>
+	<input type="password" id="password_2" ng-controller="signup_controller"  id="password_1" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_3">Pattern 3</label>
+	<input type="password" id="password_3" ng-controller="signup_controller"  id="password_2" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_4">Pattern 4</label>
+	<input type="password" id="password_4" ng-controller="signup_controller"  id="password_3" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_3">Pattern 5</label>
+	<input type="password" id="password_5" ng-controller="signup_controller"  id="password_4" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_6">Pattern 6</label>
+	<input type="password" id="password_6" ng-controller="signup_controller"  id="password_5" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_7">Pattern 7</label>
+	<input type="password" id="password_7" ng-controller="signup_controller"  id="password_6" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_8">Pattern 8</label>
+	<input type="password" id="password_8" ng-controller="signup_controller"  id="password_7" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<label id"lbl_password_9">Pattern 9</label>
+	<input type="password" id="password_9" ng-controller="signup_controller"  id="password_8" ng-keypress="keyPress($event)"  ng-keyup="keyUp($event)" ng-focus="initVar()" required/>
+	<br>
+	<input type="button" class="login_cancel"  id="login" value="Cancel"/>
+	<input type="button" class="login_button" ng-controller="signup_controller" id="login" value="Change Password" ng-click="changePassword()"/>
+	</div>
+	</body>
+</html>
