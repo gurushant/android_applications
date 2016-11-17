@@ -24,21 +24,16 @@ testModule.controller('testCtrl',function($scope,$http,$window,$attrs)
 
 	$http.get("http://"+serverIpAddress+":9095/orders/getOrderDetail?order_id="+orderId+"&restaruent_id="+restaruentId,config).success(function(response)
 					{
-						var jsonResponse=JSON.stringify(response);
-						console.log('Order details=>'+jsonResponse);
-						jsonResponse=JSON.parse(jsonResponse);
-						if(JSON.parse(response).message=='Order not found')
+						
+						if(response.message=='Order not found')
 						{
 							alert('Order does not exist in system');
 							return;
 						}
 
-						console.log("Order details is =>"+jsonResponse);	
-						console.log('Order id is '+jsonResponse["id"]);
-						$scope.order_id=jsonResponse.id;
-						var recipesJson=jsonResponse.recipes_in_orders;
-						recipesJson=recipesJson.substring(0,recipesJson.length);
-						recipesJson=recipesJson.replace("\\","");
+						console.log('Order id is '+response["id"]);
+						$scope.order_id=response.id;
+						var recipesJson=response.recipes_in_orders;
 						recipesJson=JSON.parse(recipesJson);
 						console.log('Recipes are =>'+recipesJson.length);
 						$scope.items=recipesJson;
