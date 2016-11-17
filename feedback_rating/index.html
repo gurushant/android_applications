@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<script type="text/javascript">
+		function test(element)
+		{
+			alert(element.value)	
+			alert('test');
+		}
+
+		function isNumberKey(evt, element) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+		  if (charCode > 31 && (charCode < 48 || charCode > 57) && !(charCode == 46 || charcode == 8))
+		    return false;
+		  else {
+		    var len = element.value.length;
+		    var index = element.value.indexOf('.');
+		    if (index > 0 && charCode == 46) {
+		      return false;
+		    }
+		    if (index > 0) {
+		      var CharAfterdot = (len + 1) - index;
+		      if (CharAfterdot > 1) {
+		        return false;
+		      }
+		    }
+
+		  }
+  		return true;
+		}
+
+		function roundRating(element)
+		{
+
+			var stars=element.value
+			var isMoreThan=false;
+			stars=parseFloat(stars);
+			var val=parseFloat(stars/0.5);
+			var rate=Math.round(stars/0.5);
+			element.value=rate/2;;
+		}
+
+		</script>
+	</head>
+
+<body ng-app="testApp" ng-controller="testCtrl">
+
+	<span>Order : <b>{{ order_id }}</b></span>
+	<br>
+	<br>
+	Economy:<input id="economy" type="number" ng-model="economy" ng-blur="roundUp(economy,'economy')"  onkeypress="return isNumberKey(event,this)"></input>
+	<br>
+	<br>
+	Ambience:<input id="ambience" type="number" ng-model="ambience" ng-blur="roundUp(ambience,'ambience')"  onkeypress="return isNumberKey(event,this)"></input>
+	<br>
+	<br>
+	Service:<input id="service" type="number" ng-model="service" ng-blur="roundUp(service,'service')"  onkeypress="return isNumberKey(event,this)"></input>
+	<br>
+	<br>
+	Feedback:
+	<textarea name="feedback" ng-model="feedback" cols="40" rows="5"></textarea>
+	<br>
+	<br>
+	Select Receipe:
+	<select  ng-model="selectedData" ng-options="item as item for item in items" ng-change="createRatingBox()">
+	</select>
+	<input type="button"  value="Add" ng-click="addStarBox()"></input>
+	<div id="content">
+	</div>
+	<br>
+
+	<br>
+	<br>
+			<input type="button" value="Submit Feedback" ng-click="submitFeedback()"></input>
+		
+	</body>
+</html>
