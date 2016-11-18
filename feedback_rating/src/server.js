@@ -149,7 +149,7 @@ app.post('/review/post_feedback',function(req,res)
 				{
 					logger.log('Email notification table is updated');
 					logger.log('Updating orders table');
-					commonUtils.updateOrders(feedbackPayload,orderId,restaurantId,function(err,response)
+					commonUtils.updateOrders(feedbackPayload,orderId,restaurantId,overallRecipeRating,overAllRating,feedback,function(err,response)
 					{
 						if(err!=null)
 						{

@@ -54,9 +54,9 @@ exports.updateEmailNotifications=function(orderId,restaurantId,callback)
 /**
 *This method updates order's record in orders table.
 */
-exports.updateOrders=function(feedbackPayload,orderId,restaurantId,callback)
+exports.updateOrders=function(feedbackPayload,orderId,restaurantId,overallRecipeRating,overAllOrderRating,feedback,callback)
 	{	
-	        var query=" update orders set rating_feedback_data='"+feedbackPayload+"' where id="+orderId+" and restaruent_id="+restaurantId;
+	        var query=" update orders set rating_feedback_data='"+feedbackPayload+"',overall_recipe_rating='"+overallRecipeRating+"',overall_order_rating='"+overAllOrderRating+"',feedback='"+feedback+"' where id="+orderId+" and restaruent_id="+restaurantId;
 		dbUtil.executeQuery(query,callback);
 	}
 

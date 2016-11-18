@@ -951,3 +951,358 @@
 2016-11-18T09:40:28.801Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
 2016-11-18T09:40:28.801Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
 2016-11-18T09:40:28.802Z - debug: db connection is released succesfully
+2016-11-18T09:48:02.721Z - debug: Creating db connection pool
+2016-11-18T09:48:02.785Z - info: Listenening on 9095
+2016-11-18T09:48:06.292Z - info: Getting order details of 2009
+2016-11-18T09:48:06.292Z - debug: Executing=> select *from orders where id=2009 and restaruent_id=1
+2016-11-18T09:48:06.305Z - debug: Response of get order details is =>{"id":2009,"restaruent_id":1,"served_date_time":"2016-11-14T16:56:18.000Z","order_amount":690,"customer_email":"jeevan@gmail.com","customer_mobile":"9527121842","recipes_in_orders":"[\"chicken handi\", \"butter naan\", \"milk shake\"]","rating_feedback_data":"{}","created_on":"2016-11-14T16:56:18.000Z"}
+2016-11-18T09:48:06.309Z - debug: db connection is released succesfully
+2016-11-18T09:48:32.605Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:48:32.605Z - info: Posting feedback and rating
+2016-11-18T09:48:32.605Z - info: Recipe array length is 2
+2016-11-18T09:48:32.605Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T09:48:32.605Z - debug: Rating is[object Object] ==>3
+2016-11-18T09:48:32.605Z - debug: Rating sum is 5.5
+2016-11-18T09:48:32.605Z - debug: Rounding up recipe rating
+2016-11-18T09:48:32.606Z - debug: Rounded recipe rating is 3
+2016-11-18T09:48:32.607Z - debug: Rounding up overall  rating.Wihout rounding is 2.625
+2016-11-18T09:48:32.607Z - debug: Rounded overall rating is 2.5
+2016-11-18T09:48:32.607Z - debug: Final recipe rating is 3
+2016-11-18T09:48:32.607Z - debug: Final rating of order id 2.5
+2016-11-18T09:48:32.607Z - debug: Feedback payload is {"order_id":"2009","restaruent_id":"1","economy":2.5,"ambience":2,"qos":3,"feedback":"4.3","recipe_rating":[{"chicken handi":2.5},{"milk shake":3}],"overall_recipe_rating":3,"overall_order_rating":2.5}
+2016-11-18T09:48:32.607Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:48:32.607Z - debug: Executing=> select *from email_notification  where order_id='2009' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:48:32.609Z - debug: db connection is released succesfully
+2016-11-18T09:48:32.610Z - debug: Checking whether feedback is already received for this order 2009=>false
+2016-11-18T09:48:32.610Z - info: Updating email notifications table
+2016-11-18T09:48:32.610Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2009 and restaruent_id=1
+2016-11-18T09:48:32.613Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2009","restaruent_id":"1","economy":2.5,"ambience":2,"qos":3,"feedback":"4.3","recipe_rating":[{"chicken handi":2.5},{"milk shake":3}],"overall_recipe_rating":3,"overall_order_rating":2.5}' where id=2009 and restaruent_id=1
+2016-11-18T09:48:32.614Z - debug: db connection is released succesfully
+2016-11-18T09:48:32.618Z - info: Order updated successfully
+2016-11-18T09:48:32.618Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:48:32.618Z - debug: db connection is released succesfully
+2016-11-18T09:50:05.558Z - info: Getting order details of 2009
+2016-11-18T09:50:05.559Z - debug: Executing=> select *from orders where id=2009 and restaruent_id=1
+2016-11-18T09:50:05.561Z - debug: Response of get order details is =>{"id":2009,"restaruent_id":1,"served_date_time":"2016-11-14T16:56:18.000Z","order_amount":690,"customer_email":"jeevan@gmail.com","customer_mobile":"9527121842","recipes_in_orders":"[\"chicken handi\", \"butter naan\", \"milk shake\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 2.5, \"ambience\": 2, \"feedback\": \"4.3\", \"order_id\": \"2009\", \"recipe_rating\": [{\"chicken handi\": 2.5}, {\"milk shake\": 3}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.5, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:56:18.000Z"}
+2016-11-18T09:50:05.561Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:50:05.561Z - debug: db connection is released succesfully
+2016-11-18T09:51:03.942Z - info: Getting order details of 2009
+2016-11-18T09:51:03.942Z - debug: Executing=> select *from orders where id=2009 and restaruent_id=1
+2016-11-18T09:51:03.944Z - debug: Response of get order details is =>{"id":2009,"restaruent_id":1,"served_date_time":"2016-11-14T16:56:18.000Z","order_amount":690,"customer_email":"jeevan@gmail.com","customer_mobile":"9527121842","recipes_in_orders":"[\"chicken handi\", \"butter naan\", \"milk shake\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 2.5, \"ambience\": 2, \"feedback\": \"4.3\", \"order_id\": \"2009\", \"recipe_rating\": [{\"chicken handi\": 2.5}, {\"milk shake\": 3}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.5, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:56:18.000Z"}
+2016-11-18T09:51:03.944Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:51:03.944Z - debug: db connection is released succesfully
+2016-11-18T09:55:07.234Z - debug: Creating db connection pool
+2016-11-18T09:55:07.297Z - info: Listenening on 9095
+2016-11-18T09:55:30.312Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:55:30.312Z - info: Posting feedback and rating
+2016-11-18T09:55:30.312Z - info: Recipe array length is 1
+2016-11-18T09:55:30.313Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T09:55:30.313Z - debug: Rating sum is 2.5
+2016-11-18T09:55:30.313Z - debug: Rounding up recipe rating
+2016-11-18T09:55:30.314Z - debug: Rounded recipe rating is 2.5
+2016-11-18T09:55:30.314Z - debug: Rounding up overall  rating.Wihout rounding is 2.375
+2016-11-18T09:55:30.314Z - debug: Rounded overall rating is 2.5
+2016-11-18T09:55:30.314Z - debug: Final recipe rating is 2.5
+2016-11-18T09:55:30.314Z - debug: Final rating of order id 2.5
+2016-11-18T09:55:30.315Z - debug: Feedback payload is {"order_id":"2009","restaruent_id":"1","economy":2,"ambience":2.5,"qos":2.5,"feedback":"2.3","recipe_rating":[{"chicken handi":2.5}],"overall_recipe_rating":2.5,"overall_order_rating":2.5}
+2016-11-18T09:55:30.315Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:55:30.315Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2009' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:55:30.326Z - debug: db connection is released succesfully
+2016-11-18T09:55:30.326Z - debug: Checking whether feedback is already received for this order 2009=>true
+2016-11-18T09:55:54.592Z - info: Getting order details of 2009
+2016-11-18T09:55:54.592Z - debug: Executing=> select *from orders where id=2009 and restaruent_id=1
+2016-11-18T09:55:54.595Z - debug: Response of get order details is =>{"id":2009,"restaruent_id":1,"served_date_time":"2016-11-14T16:56:18.000Z","order_amount":690,"customer_email":"jeevan@gmail.com","customer_mobile":"9527121842","recipes_in_orders":"[\"chicken handi\", \"butter naan\", \"milk shake\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 2.5, \"ambience\": 2, \"feedback\": \"4.3\", \"order_id\": \"2009\", \"recipe_rating\": [{\"chicken handi\": 2.5}, {\"milk shake\": 3}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.5, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:56:18.000Z"}
+2016-11-18T09:55:54.596Z - debug: db connection is released succesfully
+2016-11-18T09:56:21.926Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:56:21.927Z - info: Posting feedback and rating
+2016-11-18T09:56:21.927Z - info: Recipe array length is 2
+2016-11-18T09:56:21.927Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:56:21.927Z - debug: Rating is[object Object] ==>2
+2016-11-18T09:56:21.927Z - debug: Rating sum is 5.5
+2016-11-18T09:56:21.927Z - debug: Rounding up recipe rating
+2016-11-18T09:56:21.927Z - debug: Rounded recipe rating is 3
+2016-11-18T09:56:21.927Z - debug: Rounding up overall  rating.Wihout rounding is 2.5
+2016-11-18T09:56:21.927Z - debug: Rounded overall rating is 2.5
+2016-11-18T09:56:21.928Z - debug: Final recipe rating is 3
+2016-11-18T09:56:21.928Z - debug: Final rating of order id 2.5
+2016-11-18T09:56:21.928Z - debug: Feedback payload is {"order_id":"2009","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2,"feedback":"4.5","recipe_rating":[{"butter naan":3.5},{"chicken handi":2}],"overall_recipe_rating":3,"overall_order_rating":2.5}
+2016-11-18T09:56:21.928Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:56:21.928Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2009' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:56:21.930Z - debug: db connection is released succesfully
+2016-11-18T09:56:21.930Z - debug: Checking whether feedback is already received for this order 2009=>true
+2016-11-18T09:56:47.124Z - info: Getting order details of 2007
+2016-11-18T09:56:47.124Z - debug: Executing=> select *from orders where id=2007 and restaruent_id=1
+2016-11-18T09:56:47.126Z - debug: Response of get order details is =>{"id":2007,"restaruent_id":1,"served_date_time":"2016-11-14T16:53:38.000Z","order_amount":690,"customer_email":"dev@gmail.com","customer_mobile":"9927121842","recipes_in_orders":"[\"chicken handi\", \"butter roti\"]","rating_feedback_data":"{}","created_on":"2016-11-14T16:53:38.000Z"}
+2016-11-18T09:56:47.126Z - debug: db connection is released succesfully
+2016-11-18T09:57:10.724Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:57:10.725Z - info: Posting feedback and rating
+2016-11-18T09:57:10.725Z - info: Recipe array length is 2
+2016-11-18T09:57:10.725Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:57:10.725Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:57:10.725Z - debug: Rating sum is 7
+2016-11-18T09:57:10.725Z - debug: Rounding up recipe rating
+2016-11-18T09:57:10.725Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:57:10.725Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:57:10.726Z - debug: Rounded overall rating is 3
+2016-11-18T09:57:10.726Z - debug: Final recipe rating is 3.5
+2016-11-18T09:57:10.726Z - debug: Final rating of order id 3
+2016-11-18T09:57:10.727Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:57:10.727Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:57:10.727Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:57:10.728Z - debug: db connection is released succesfully
+2016-11-18T09:57:10.729Z - debug: Checking whether feedback is already received for this order 2007=>false
+2016-11-18T09:57:10.729Z - info: Updating email notifications table
+2016-11-18T09:57:10.729Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2007 and restaruent_id=1
+2016-11-18T09:57:10.733Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}' where id=2007 and restaruent_id=1
+2016-11-18T09:57:10.733Z - debug: db connection is released succesfully
+2016-11-18T09:57:10.738Z - info: Order updated successfully
+2016-11-18T09:57:10.738Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:57:10.738Z - debug: db connection is released succesfully
+2016-11-18T09:57:26.509Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:57:26.510Z - info: Posting feedback and rating
+2016-11-18T09:57:26.510Z - info: Recipe array length is 2
+2016-11-18T09:57:26.510Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:57:26.510Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:57:26.510Z - debug: Rating sum is 7
+2016-11-18T09:57:26.510Z - debug: Rounding up recipe rating
+2016-11-18T09:57:26.511Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:57:26.511Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:57:26.511Z - debug: Rounded overall rating is 3
+2016-11-18T09:57:26.511Z - debug: Final recipe rating is 3.5
+2016-11-18T09:57:26.511Z - debug: Final rating of order id 3
+2016-11-18T09:57:26.511Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:57:26.511Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:57:26.511Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:57:26.513Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:57:26.513Z - debug: db connection is released succesfully
+2016-11-18T09:57:26.513Z - debug: Checking whether feedback is already received for this order 2007=>true
+2016-11-18T09:58:25.000Z - debug: Creating db connection pool
+2016-11-18T09:58:25.065Z - info: Listenening on 9095
+2016-11-18T09:58:53.122Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:58:53.122Z - info: Posting feedback and rating
+2016-11-18T09:58:53.122Z - info: Recipe array length is 2
+2016-11-18T09:58:53.122Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:58:53.123Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:58:53.123Z - debug: Rating sum is 7
+2016-11-18T09:58:53.123Z - debug: Rounding up recipe rating
+2016-11-18T09:58:53.124Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:58:53.124Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:58:53.124Z - debug: Rounded overall rating is 3
+2016-11-18T09:58:53.124Z - debug: Final recipe rating is 3.5
+2016-11-18T09:58:53.124Z - debug: Final rating of order id 3
+2016-11-18T09:58:53.124Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:58:53.124Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:58:53.125Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:58:53.136Z - debug: db connection is released succesfully
+2016-11-18T09:58:53.136Z - debug: Checking whether feedback is already received for this order 2007=>true
+2016-11-18T09:59:07.910Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:59:07.911Z - info: Posting feedback and rating
+2016-11-18T09:59:07.911Z - info: Recipe array length is 2
+2016-11-18T09:59:07.911Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:07.911Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:07.911Z - debug: Rating sum is 7
+2016-11-18T09:59:07.911Z - debug: Rounding up recipe rating
+2016-11-18T09:59:07.911Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:59:07.911Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:59:07.912Z - debug: Rounded overall rating is 3
+2016-11-18T09:59:07.912Z - debug: Final recipe rating is 3.5
+2016-11-18T09:59:07.912Z - debug: Final rating of order id 3
+2016-11-18T09:59:07.912Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:59:07.912Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:59:07.912Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:59:07.914Z - debug: db connection is released succesfully
+2016-11-18T09:59:07.915Z - debug: Checking whether feedback is already received for this order 2007=>true
+2016-11-18T09:59:07.992Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:59:07.993Z - info: Posting feedback and rating
+2016-11-18T09:59:07.993Z - info: Recipe array length is 2
+2016-11-18T09:59:07.993Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:07.993Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:07.993Z - debug: Rating sum is 7
+2016-11-18T09:59:07.993Z - debug: Rounding up recipe rating
+2016-11-18T09:59:07.993Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:59:07.994Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:59:07.994Z - debug: Rounded overall rating is 3
+2016-11-18T09:59:07.994Z - debug: Final recipe rating is 3.5
+2016-11-18T09:59:07.994Z - debug: Final rating of order id 3
+2016-11-18T09:59:07.994Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:59:07.995Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:59:07.995Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:59:07.996Z - debug: db connection is released succesfully
+2016-11-18T09:59:07.996Z - debug: Checking whether feedback is already received for this order 2007=>true
+2016-11-18T09:59:27.903Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:59:27.903Z - info: Posting feedback and rating
+2016-11-18T09:59:27.905Z - info: Recipe array length is 2
+2016-11-18T09:59:27.905Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:27.905Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:27.905Z - debug: Rating sum is 7
+2016-11-18T09:59:27.905Z - debug: Rounding up recipe rating
+2016-11-18T09:59:27.905Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:59:27.905Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:59:27.905Z - debug: Rounded overall rating is 3
+2016-11-18T09:59:27.905Z - debug: Final recipe rating is 3.5
+2016-11-18T09:59:27.906Z - debug: Final rating of order id 3
+2016-11-18T09:59:27.906Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:59:27.906Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:59:27.906Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:59:27.908Z - debug: db connection is released succesfully
+2016-11-18T09:59:27.909Z - debug: Checking whether feedback is already received for this order 2007=>false
+2016-11-18T09:59:27.909Z - info: Updating email notifications table
+2016-11-18T09:59:27.909Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2007 and restaruent_id=1
+2016-11-18T09:59:27.912Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}' where id=2007 and restaruent_id=1
+2016-11-18T09:59:27.913Z - debug: db connection is released succesfully
+2016-11-18T09:59:27.917Z - info: Order updated successfully
+2016-11-18T09:59:27.917Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:59:27.917Z - debug: db connection is released succesfully
+2016-11-18T09:59:28.168Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:59:28.168Z - info: Posting feedback and rating
+2016-11-18T09:59:28.168Z - info: Recipe array length is 2
+2016-11-18T09:59:28.168Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:28.168Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T09:59:28.169Z - debug: Rating sum is 7
+2016-11-18T09:59:28.169Z - debug: Rounding up recipe rating
+2016-11-18T09:59:28.169Z - debug: Rounded recipe rating is 3.5
+2016-11-18T09:59:28.169Z - debug: Rounding up overall  rating.Wihout rounding is 2.75
+2016-11-18T09:59:28.169Z - debug: Rounded overall rating is 3
+2016-11-18T09:59:28.169Z - debug: Final recipe rating is 3.5
+2016-11-18T09:59:28.169Z - debug: Final rating of order id 3
+2016-11-18T09:59:28.169Z - debug: Feedback payload is {"order_id":"2007","restaruent_id":"1","economy":2.5,"ambience":2.5,"qos":2.5,"feedback":"tsfknsldkfnsdlkfn","recipe_rating":[{"chicken handi":3.5},{"butter roti":3.5}],"overall_recipe_rating":3.5,"overall_order_rating":3}
+2016-11-18T09:59:28.169Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:59:28.169Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2007' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:59:28.171Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:59:28.171Z - debug: db connection is released succesfully
+2016-11-18T09:59:28.171Z - debug: Checking whether feedback is already received for this order 2007=>true
+2016-11-18T10:01:44.741Z - debug: Creating db connection pool of 2 connections
+2016-11-18T10:01:44.802Z - info: Listenening on 9095
+2016-11-18T15:02:32.435Z - debug: Creating db connection pool of 2 connections
+2016-11-18T15:02:32.498Z - info: Listenening on 9095
+2016-11-18T15:02:38.654Z - info: Getting order details of 2000
+2016-11-18T15:02:38.654Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
+2016-11-18T15:02:38.667Z - debug: Order does not exist =>2000
+2016-11-18T15:02:38.670Z - debug: db connection is released succesfully
+2016-11-18T15:02:43.892Z - info: Getting order details of 2000
+2016-11-18T15:02:43.892Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T15:02:43.896Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":null,"created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T15:02:43.896Z - debug: db connection is released succesfully
+2016-11-18T15:11:48.791Z - debug: Creating db connection pool of 2 connections
+2016-11-18T15:11:48.852Z - info: Listenening on 9095
+2016-11-18T15:11:52.674Z - info: Getting order details of 2000
+2016-11-18T15:11:52.675Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T15:11:52.689Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":null,"created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T15:11:52.692Z - debug: db connection is released succesfully
+2016-11-18T15:13:11.725Z - info: Feedback request detail=>[object Object]
+2016-11-18T15:13:11.725Z - info: Posting feedback and rating
+2016-11-18T15:13:11.725Z - info: Recipe array length is 2
+2016-11-18T15:13:11.726Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T15:13:11.726Z - debug: Rating is[object Object] ==>3
+2016-11-18T15:13:11.726Z - debug: Rating sum is 5.5
+2016-11-18T15:13:11.726Z - debug: Rounding up recipe rating
+2016-11-18T15:13:11.727Z - debug: Rounded recipe rating is 3
+2016-11-18T15:13:11.727Z - debug: Rounding up overall  rating.Wihout rounding is 2.5
+2016-11-18T15:13:11.727Z - debug: Rounded overall rating is 2.5
+2016-11-18T15:13:11.727Z - debug: Final recipe rating is 3
+2016-11-18T15:13:11.727Z - debug: Final rating of order id 2.5
+2016-11-18T15:13:11.728Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","economy":2,"ambience":2.5,"qos":2.5,"feedback":"test feedback","recipe_rating":[{"veg birayani":2.5},{"paratha":3}],"overall_recipe_rating":3,"overall_order_rating":2.5}
+2016-11-18T15:13:11.728Z - debug: Checking whether order has already received feedback.
+2016-11-18T15:13:11.728Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T15:13:11.730Z - debug: db connection is released succesfully
+2016-11-18T15:13:11.730Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T15:13:11.730Z - info: Updating email notifications table
+2016-11-18T15:13:11.730Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T15:13:11.733Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","economy":2,"ambience":2.5,"qos":2.5,"feedback":"test feedback","recipe_rating":[{"veg birayani":2.5},{"paratha":3}],"overall_recipe_rating":3,"overall_order_rating":2.5}' where id=2000 and restaruent_id=1
+2016-11-18T15:13:11.734Z - debug: db connection is released succesfully
+2016-11-18T15:13:11.738Z - info: Order updated successfully
+2016-11-18T15:13:11.738Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T15:13:11.739Z - debug: db connection is released succesfully
+2016-11-18T15:19:19.700Z - info: Feedback request detail=>[object Object]
+2016-11-18T15:19:19.700Z - info: Posting feedback and rating
+2016-11-18T15:19:19.700Z - info: Recipe array length is 2
+2016-11-18T15:19:19.701Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T15:19:19.701Z - debug: Rating is[object Object] ==>3
+2016-11-18T15:19:19.701Z - debug: Rating sum is 5.5
+2016-11-18T15:19:19.701Z - debug: Rounding up recipe rating
+2016-11-18T15:19:19.701Z - debug: Rounded recipe rating is 3
+2016-11-18T15:19:19.701Z - debug: Rounding up overall  rating.Wihout rounding is 2.5
+2016-11-18T15:19:19.701Z - debug: Rounded overall rating is 2.5
+2016-11-18T15:19:19.701Z - debug: Final recipe rating is 3
+2016-11-18T15:19:19.702Z - debug: Final rating of order id 2.5
+2016-11-18T15:19:19.702Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","economy":2,"ambience":2.5,"qos":2.5,"feedback":"test feedback","recipe_rating":[{"veg birayani":2.5},{"paratha":3}],"overall_recipe_rating":3,"overall_order_rating":2.5}
+2016-11-18T15:19:19.702Z - debug: Checking whether order has already received feedback.
+2016-11-18T15:19:19.702Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T15:19:19.704Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T15:19:19.704Z - debug: db connection is released succesfully
+2016-11-18T15:19:19.704Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T15:19:45.007Z - info: Getting order details of 2000
+2016-11-18T15:19:45.007Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T15:19:45.009Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2.5, \"economy\": 2, \"ambience\": 2.5, \"feedback\": \"test feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"veg birayani\": 2.5}, {\"paratha\": 3}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.5, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T15:19:45.010Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T15:19:45.010Z - debug: db connection is released succesfully
+2016-11-18T15:19:47.690Z - info: Getting order details of 2000
+2016-11-18T15:19:47.692Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T15:19:47.694Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2.5, \"economy\": 2, \"ambience\": 2.5, \"feedback\": \"test feedback\", \"order_id\": \"2000\", \"recipe_rating\": [{\"veg birayani\": 2.5}, {\"paratha\": 3}], \"restaruent_id\": \"1\", \"overall_order_rating\": 2.5, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T15:19:47.695Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T15:19:47.695Z - debug: db connection is released succesfully
+2016-11-18T15:20:18.751Z - info: Getting order details of 2000
+2016-11-18T15:20:18.751Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
+2016-11-18T15:20:18.753Z - debug: Order does not exist =>2000
+2016-11-18T15:20:18.753Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T15:20:18.753Z - debug: db connection is released succesfully
+2016-11-18T20:01:17.469Z - debug: Creating db connection pool of 2 connections
+2016-11-18T20:01:17.532Z - info: Listenening on 9095
+2016-11-18T20:01:54.551Z - info: Getting order details of 2000
+2016-11-18T20:01:54.551Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T20:01:54.566Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":null,"created_on":"2016-11-14T16:24:27.000Z","overall_recipe_rating":null,"overall_order_rating":null}
+2016-11-18T20:01:54.569Z - debug: db connection is released succesfully
+2016-11-18T20:02:40.815Z - info: Feedback request detail=>[object Object]
+2016-11-18T20:02:40.815Z - info: Posting feedback and rating
+2016-11-18T20:02:40.815Z - info: Recipe array length is 2
+2016-11-18T20:02:40.816Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T20:02:40.816Z - debug: Rating is[object Object] ==>3
+2016-11-18T20:02:40.816Z - debug: Rating sum is 5.5
+2016-11-18T20:02:40.816Z - debug: Rounding up recipe rating
+2016-11-18T20:02:40.817Z - debug: Rounded recipe rating is 3
+2016-11-18T20:02:40.817Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T20:02:40.817Z - debug: Rounded overall rating is 3
+2016-11-18T20:02:40.817Z - debug: Final recipe rating is 3
+2016-11-18T20:02:40.817Z - debug: Final rating of order id 3
+2016-11-18T20:02:40.818Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","economy":2.5,"ambience":3,"qos":3.5,"feedback":"this is feedback","recipe_rating":[{"veg birayani":2.5},{"veg pulav":3}],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T20:02:40.818Z - debug: Checking whether order has already received feedback.
+2016-11-18T20:02:40.818Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T20:02:40.820Z - debug: db connection is released succesfully
+2016-11-18T20:02:40.820Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T20:02:40.820Z - info: Updating email notifications table
+2016-11-18T20:02:40.820Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T20:02:40.824Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","economy":2.5,"ambience":3,"qos":3.5,"feedback":"this is feedback","recipe_rating":[{"veg birayani":2.5},{"veg pulav":3}],"overall_recipe_rating":3,"overall_order_rating":3}',overall_recipe_rating='3',overall_order_rating='3' where id=2000 and restaruent_id=1
+2016-11-18T20:02:40.825Z - debug: db connection is released succesfully
+2016-11-18T20:02:40.829Z - info: Order updated successfully
+2016-11-18T20:02:40.829Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T20:02:40.829Z - debug: db connection is released succesfully
+2016-11-18T20:06:01.658Z - debug: Creating db connection pool of 2 connections
+2016-11-18T20:06:01.723Z - info: Listenening on 9095
+2016-11-18T20:06:07.681Z - info: Getting order details of 2000
+2016-11-18T20:06:07.682Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T20:06:07.694Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":null,"created_on":"2016-11-14T16:24:27.000Z","overall_recipe_rating":3,"overall_order_rating":3,"feedback":null}
+2016-11-18T20:06:07.698Z - debug: db connection is released succesfully
+2016-11-18T20:06:40.228Z - info: Feedback request detail=>[object Object]
+2016-11-18T20:06:40.228Z - info: Posting feedback and rating
+2016-11-18T20:06:40.228Z - info: Recipe array length is 2
+2016-11-18T20:06:40.229Z - debug: Rating is[object Object] ==>2.5
+2016-11-18T20:06:40.229Z - debug: Rating is[object Object] ==>3.5
+2016-11-18T20:06:40.229Z - debug: Rating sum is 6
+2016-11-18T20:06:40.229Z - debug: Rounding up recipe rating
+2016-11-18T20:06:40.230Z - debug: Rounded recipe rating is 3
+2016-11-18T20:06:40.230Z - debug: Rounding up overall  rating.Wihout rounding is 2.625
+2016-11-18T20:06:40.230Z - debug: Rounded overall rating is 2.5
+2016-11-18T20:06:40.230Z - debug: Final recipe rating is 3
+2016-11-18T20:06:40.230Z - debug: Final rating of order id 2.5
+2016-11-18T20:06:40.231Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","economy":2,"ambience":2.5,"qos":3,"feedback":"test feedback","recipe_rating":[{"veg birayani":2.5},{"chicken masala":3.5}],"overall_recipe_rating":3,"overall_order_rating":2.5}
+2016-11-18T20:06:40.231Z - debug: Checking whether order has already received feedback.
+2016-11-18T20:06:40.231Z - debug: Executing whether feedback already exists => select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T20:06:40.234Z - debug: db connection is released succesfully
+2016-11-18T20:06:40.234Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T20:06:40.234Z - info: Updating email notifications table
+2016-11-18T20:06:40.234Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T20:06:40.237Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","economy":2,"ambience":2.5,"qos":3,"feedback":"test feedback","recipe_rating":[{"veg birayani":2.5},{"chicken masala":3.5}],"overall_recipe_rating":3,"overall_order_rating":2.5}',overall_recipe_rating='3',overall_order_rating='2.5',feedback='test feedback' where id=2000 and restaruent_id=1
+2016-11-18T20:06:40.238Z - debug: db connection is released succesfully
+2016-11-18T20:06:40.242Z - info: Order updated successfully
+2016-11-18T20:06:40.242Z - warn: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T20:06:40.242Z - debug: db connection is released succesfully
