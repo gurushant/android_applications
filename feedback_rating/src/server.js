@@ -15,14 +15,9 @@ app.use(bodyParser());
 */
 var logger = require("./org.common/utils/logger/logger");
 
-//reading server
-
+//default error message in case of error
 var ERROR_MSG="{ \"status\":\"ERROR\", \"message\":\"Error occured.Please try again\"}";
-
-/*
-*Following line executes 
-*/
-var dbConnection = require("./org.common/utils/db/db_util");
+ERROR_MSG=JSON.parse(ERROR_MSG); //converting into the json object
 
 /*
 *Following code  contains the reference to common methods modules.
@@ -73,13 +68,12 @@ app.get('/orders/getOrderDetail',function(req,res)
 			var response={};
 			response.message='Order not found';
 			response.status='SUCCESS';
-			response=JSON.stringify(response);
-			response=JSON.parse(response);
  
 		}
 		res.json(response);
 	});	
 });
+
 
 /**
  *This function is for
@@ -107,9 +101,10 @@ app.post('/review/post_feedback',function(req,res)
 	logger.info('Recipe array length is '+receipeLength);
 	var ratingSum=0;
 	//Sum of all recipies in order.
+
 	for(var k=0;k <receipeLength;k++)
 	{
-		console.log(parseFloat(JSON.stringify(recipeArray[k]).split(':')[1].replace('}','')));
+		logger.debug('Rating is'+recipeArray[k]+' ==>'+ parseFloat(JSON.stringify(recipeArray[k]).split(':')[1].replace('}','')));
 		ratingSum+=parseFloat(JSON.stringify(recipeArray[k]).split(':')[1].replace('}',''));
 	}
 	logger.debug('Rating sum is '+ratingSum);
@@ -167,14 +162,14 @@ app.post('/review/post_feedback',function(req,res)
 			         			response="{ \"status\": \"SUCCESS\", \"message\": \"Feedback updated successfully.\" }";
 					
 						}
-						 res.json(response);
+						 res.json(JSON.parse(response));
 					});
 				}
 				else
 				{
 					logger.error('Error occrued while updating email notification table =>'+err);	
 					response="{ \"status\": \"ERROR\", \"message\": \"Error occured while updating feedback and rating.\" }";
-					 res.json(response);
+					 res.json(JSON.parse(response));
 				}
 
 			});	
@@ -182,7 +177,7 @@ app.post('/review/post_feedback',function(req,res)
 		else
 		{
 			        response="{ \"status\": \"SUCCESS\", \"message\": \"Feedback already exist for this order\" }";
-				 res.json(response);	
+				 res.json(JSON.parse(response));	
 		}
 		}
 	

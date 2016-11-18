@@ -1,29 +1,953 @@
-2016-11-18T06:07:24.284Z - error: uncaughtException: ENOENT, no such file or directory 'config/db.properties' date=Fri Nov 18 2016 01:07:24 GMT-0500 (EST), pid=7639, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25288704, heapTotal=18635008, heapUsed=10305952, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=850408.08019696, trace=[column=18, file=fs.js, function=Object.fs.openSync, line=439, method=fs.openSync, native=false, column=15, file=fs.js, function=Object.fs.readFileSync, line=290, method=fs.readFileSync, native=false, column=26, file=/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js, function=PropertiesReader.append, line=49, method=append, native=false, column=14, file=/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js, function=new PropertiesReader, line=16, method=null, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js, function=PropertiesReader.builder, line=276, method=builder, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/src/utils/db/db_util.js, function=, line=8, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false], stack=[Error: ENOENT, no such file or directory 'config/db.properties',     at Object.fs.openSync (fs.js:439:18),     at Object.fs.readFileSync (fs.js:290:15),     at PropertiesReader.append (/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js:49:26),     at new PropertiesReader (/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js:16:14),     at PropertiesReader.builder (/home/ec2-user/nodejs/feedback_rating/src/node_modules/properties-reader/src/PropertiesReader.js:276:16),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/utils/db/db_util.js:8:12),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12)]
-2016-11-18T06:08:03.894Z - error: uncaughtException: Cannot find module './utils/commonUtils/commonMethods' date=Fri Nov 18 2016 01:08:03 GMT-0500 (EST), pid=7647, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25669632, heapTotal=18635008, heapUsed=10531832, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=850447.691532955, trace=[column=15, file=module.js, function=Function.Module._resolveFilename, line=338, method=Module._resolveFilename, native=false, column=25, file=module.js, function=Function.Module._load, line=280, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=30, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=10, file=module.js, function=Function.Module.runMain, line=497, method=Module.runMain, native=false], stack=[Error: Cannot find module './utils/commonUtils/commonMethods',     at Function.Module._resolveFilename (module.js:338:15),     at Function.Module._load (module.js:280:25),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:30:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Function.Module.runMain (module.js:497:10)]
-2016-11-18T06:09:46.033Z - error: uncaughtException: Cannot find module './utils/logger/logger' date=Fri Nov 18 2016 01:09:46 GMT-0500 (EST), pid=7658, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25292800, heapTotal=18635008, heapUsed=10405456, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=850549.830542473, trace=[column=15, file=module.js, function=Function.Module._resolveFilename, line=338, method=Module._resolveFilename, native=false, column=25, file=module.js, function=Function.Module._load, line=280, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=14, file=/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js, function=, line=5, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false], stack=[Error: Cannot find module './utils/logger/logger',     at Function.Module._resolveFilename (module.js:338:15),     at Function.Module._load (module.js:280:25),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js:5:14),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17)]
-2016-11-18T06:10:34.081Z - error: uncaughtException: Cannot find module './utils/logger/logger' date=Fri Nov 18 2016 01:10:34 GMT-0500 (EST), pid=7666, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25292800, heapTotal=18635008, heapUsed=10405736, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=850597.878536472, trace=[column=15, file=module.js, function=Function.Module._resolveFilename, line=338, method=Module._resolveFilename, native=false, column=25, file=module.js, function=Function.Module._load, line=280, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=14, file=/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js, function=, line=5, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false], stack=[Error: Cannot find module './utils/logger/logger',     at Function.Module._resolveFilename (module.js:338:15),     at Function.Module._load (module.js:280:25),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js:5:14),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17)]
-2016-11-18T06:12:00.223Z - error: uncaughtException: Cannot find module './utils/db/db_util' date=Fri Nov 18 2016 01:12:00 GMT-0500 (EST), pid=7674, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25292800, heapTotal=18635008, heapUsed=10419832, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=850684.020896591, trace=[column=15, file=module.js, function=Function.Module._resolveFilename, line=338, method=Module._resolveFilename, native=false, column=25, file=module.js, function=Function.Module._load, line=280, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=14, file=/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js, function=, line=10, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false], stack=[Error: Cannot find module './utils/db/db_util',     at Function.Module._resolveFilename (module.js:338:15),     at Function.Module._load (module.js:280:25),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/common_methods/commonMethods.js:10:14),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17)]
-2016-11-18T06:12:19.985Z - debug: Connecting to the db
-2016-11-18T06:12:19.991Z - debug: Database connection object is [object Object]
-2016-11-18T06:12:19.996Z - info: Listenening on 9095
-2016-11-18T06:15:13.843Z - debug: Connecting to the db
-2016-11-18T06:15:13.848Z - debug: Database connection object is [object Object]
-2016-11-18T06:15:13.853Z - info: Listenening on 9095
-2016-11-18T06:15:23.967Z - debug: Connecting to the db
-2016-11-18T06:15:23.972Z - debug: Database connection object is [object Object]
-2016-11-18T06:15:23.977Z - info: Listenening on 9095
-2016-11-18T06:15:36.845Z - info: Getting order details of 2000
-2016-11-18T06:15:36.846Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
-2016-11-18T06:15:36.848Z - debug: Order does not exist =>2000
-2016-11-18T06:15:42.076Z - info: Getting order details of 2000
-2016-11-18T06:15:42.077Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
-2016-11-18T06:15:42.079Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3.5, \"economy\": 3.5, \"ambience\": 3.5, \"feedback\": \"this is test\", \"order_id\": \"2000\", \"recipe_rating\": [{\"chicken masala\": 3.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 3.5, \"overall_recipe_rating\": 3.5}","created_on":"2016-11-14T16:24:27.000Z"}
-2016-11-18T06:17:29.419Z - debug: Connecting to the db
-2016-11-18T06:17:29.424Z - debug: Database connection object is [object Object]
-2016-11-18T06:17:29.429Z - info: Listenening on 9095
-2016-11-18T06:17:31.824Z - info: Getting order details of 2000
-2016-11-18T06:17:31.825Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
-2016-11-18T06:17:31.829Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3.5, \"economy\": 3.5, \"ambience\": 3.5, \"feedback\": \"this is test\", \"order_id\": \"2000\", \"recipe_rating\": [{\"chicken masala\": 3.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 3.5, \"overall_recipe_rating\": 3.5}","created_on":"2016-11-14T16:24:27.000Z"}
-2016-11-18T06:17:35.788Z - info: Getting order details of 2000
-2016-11-18T06:17:35.788Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
-2016-11-18T06:17:35.790Z - debug: Order does not exist =>2000
+2016-11-18T07:57:54.565Z - debug: Creating db connection pool
+2016-11-18T07:57:54.623Z - debug: Connecting to the db
+2016-11-18T07:57:54.626Z - debug: Database connection object is [object Object]
+2016-11-18T07:57:54.632Z - info: Listenening on 9095
+2016-11-18T07:57:58.348Z - info: Getting order details of 2000
+2016-11-18T07:57:58.349Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T07:57:58.356Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T07:58:59.215Z - debug: Creating db connection pool
+2016-11-18T07:58:59.273Z - debug: Connecting to the db
+2016-11-18T07:58:59.276Z - debug: Database connection object is [object Object]
+2016-11-18T07:58:59.281Z - info: Listenening on 9095
+2016-11-18T07:59:04.256Z - info: Getting order details of 2000
+2016-11-18T07:59:04.257Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T07:59:04.263Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T07:59:04.267Z - debug: connection is [object Object]
+2016-11-18T07:59:04.267Z - debug: connection is [object Object]
+2016-11-18T08:01:13.319Z - debug: Creating db connection pool
+2016-11-18T08:01:13.379Z - debug: Connecting to the db
+2016-11-18T08:01:13.382Z - debug: Database connection object is [object Object]
+2016-11-18T08:01:13.389Z - info: Listenening on 9095
+2016-11-18T08:01:16.893Z - info: Getting order details of 2000
+2016-11-18T08:01:16.893Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:01:16.900Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:01:16.903Z - debug: Connecitino is -1
+2016-11-18T08:01:16.903Z - debug: Connecitino is 0
+2016-11-18T08:06:36.174Z - debug: Creating db connection pool
+2016-11-18T08:06:36.233Z - debug: Connecting to the db
+2016-11-18T08:06:36.237Z - debug: Database connection object is [object Object]
+2016-11-18T08:06:36.242Z - info: Listenening on 9095
+2016-11-18T08:06:41.307Z - info: Getting order details of 2000
+2016-11-18T08:06:41.307Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:06:41.314Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:06:41.322Z - error: uncaughtException: Connection already released date=Fri Nov 18 2016 03:06:41 GMT-0500 (EST), pid=8144, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=38760448, heapTotal=30107392, heapUsed=15068984, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=857565.118834949, trace=[column=13, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js, function=Pool.releaseConnection, line=137, method=releaseConnection, native=false, column=15, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js, function=PoolConnection.release, line=42, method=release, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=releaseDbCon, line=33, method=null, native=false, column=6, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=61, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.EofPacket, line=128, method=EofPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false], stack=[Error: Connection already released,     at Pool.releaseConnection (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js:137:13),     at PoolConnection.release (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js:42:15),     at releaseDbCon (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:33:16),     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:61:6),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.EofPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:128:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16)]
+2016-11-18T08:07:11.812Z - debug: Creating db connection pool
+2016-11-18T08:07:11.870Z - debug: Connecting to the db
+2016-11-18T08:07:11.874Z - debug: Database connection object is [object Object]
+2016-11-18T08:07:11.879Z - info: Listenening on 9095
+2016-11-18T08:07:15.176Z - info: Getting order details of 2000
+2016-11-18T08:07:15.177Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:07:15.183Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:07:15.187Z - debug: db connection is released succesfully
+2016-11-18T08:11:11.957Z - error: uncaughtException: Unexpected identifier date=Fri Nov 18 2016 03:11:11 GMT-0500 (EST), pid=8158, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25018368, heapTotal=18635008, heapUsed=9940872, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=857835.754422556, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected identifier,     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:15:20.096Z - error: uncaughtException: Unexpected identifier date=Fri Nov 18 2016 03:15:20 GMT-0500 (EST), pid=8167, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25018368, heapTotal=18635008, heapUsed=9940920, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=858083.893472883, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected identifier,     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:17:46.044Z - error: uncaughtException: Unexpected identifier date=Fri Nov 18 2016 03:17:46 GMT-0500 (EST), pid=8174, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25018368, heapTotal=18635008, heapUsed=9939248, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=858229.841187758, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected identifier,     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:18:44.407Z - error: uncaughtException: Unexpected token } date=Fri Nov 18 2016 03:18:44 GMT-0500 (EST), pid=8181, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25030656, heapTotal=18635008, heapUsed=9939408, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=858288.204082671, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected token },     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:18:52.042Z - error: uncaughtException: Unexpected token } date=Fri Nov 18 2016 03:18:52 GMT-0500 (EST), pid=8187, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25034752, heapTotal=18635008, heapUsed=9937336, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=858295.839133298, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected token },     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:19:30.273Z - error: uncaughtException: Unexpected token ) date=Fri Nov 18 2016 03:19:30 GMT-0500 (EST), pid=8213, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25014272, heapTotal=18635008, heapUsed=9938520, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=858334.07046855, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected token ),     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:19:53.741Z - debug: Creating db connection pool
+2016-11-18T08:19:53.799Z - debug: Connecting to the db
+2016-11-18T08:19:53.803Z - debug: Database connection object is [object Object]
+2016-11-18T08:19:53.808Z - info: Listenening on 9095
+2016-11-18T08:20:30.725Z - debug: Creating db connection pool
+2016-11-18T08:20:30.784Z - debug: Connecting to the db
+2016-11-18T08:20:30.788Z - debug: Database connection object is [object Object]
+2016-11-18T08:20:30.793Z - info: Listenening on 9095
+2016-11-18T08:20:35.857Z - info: Getting order details of 2000
+2016-11-18T08:20:35.858Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:20:35.865Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:20:35.868Z - debug: db connection is released succesfully
+2016-11-18T08:20:40.568Z - info: Getting order details of 2000
+2016-11-18T08:20:40.568Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:20:40.570Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:20:40.571Z - debug: db connection is released succesfully
+2016-11-18T08:29:11.982Z - debug: Creating db connection pool
+2016-11-18T08:29:12.041Z - debug: Connecting to the db
+2016-11-18T08:29:12.045Z - debug: Database connection object is [object Object]
+2016-11-18T08:29:12.050Z - info: Listenening on 9095
+2016-11-18T08:30:47.056Z - debug: Creating db connection pool
+2016-11-18T08:30:47.115Z - debug: Connecting to the db
+2016-11-18T08:30:47.118Z - debug: Database connection object is [object Object]
+2016-11-18T08:30:47.124Z - info: Listenening on 9095
+2016-11-18T08:30:51.752Z - info: Getting order details of 2000
+2016-11-18T08:30:51.752Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:30:51.759Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:30:51.763Z - debug: db connection is released succesfully
+2016-11-18T08:30:56.528Z - info: Getting order details of 2000
+2016-11-18T08:30:56.528Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=a
+2016-11-18T08:30:56.533Z - error: Error occured while fetching order details.Error is =>Error: ER_BAD_FIELD_ERROR: Unknown column 'a' in 'where clause'
+2016-11-18T08:31:04.317Z - info: Getting order details of 20100
+2016-11-18T08:31:04.317Z - debug: Executing=> select *from orders where id=20100 and restaruent_id=1
+2016-11-18T08:31:04.320Z - debug: Order does not exist =>20100
+2016-11-18T08:31:04.321Z - debug: db connection is released succesfully
+2016-11-18T08:31:36.524Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:31:36.524Z - info: Posting feedback and rating
+2016-11-18T08:31:36.524Z - info: Recipe array length is 2
+2016-11-18T08:31:36.525Z - debug: Rating isa:2 ==>2
+2016-11-18T08:31:36.525Z - debug: Rating isb:1 ==>1
+2016-11-18T08:31:36.525Z - debug: Rating sum is 3
+2016-11-18T08:31:36.525Z - debug: Rounding up recipe rating
+2016-11-18T08:31:36.526Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:31:36.526Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:31:36.526Z - debug: Rounded overall rating is 2
+2016-11-18T08:31:36.526Z - debug: Final recipe rating is 1.5
+2016-11-18T08:31:36.526Z - debug: Final rating of order id 2
+2016-11-18T08:31:36.526Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:31:36.526Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:31:36.527Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:31:36.528Z - debug: db connection is released succesfully
+2016-11-18T08:31:36.535Z - error: uncaughtException: undefined is not a function date=Fri Nov 18 2016 03:31:36 GMT-0500 (EST), pid=8250, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=37208064, heapTotal=30107392, heapUsed=16906616, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=859060.329822665, trace=[column=20, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=109, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.EofPacket, line=128, method=EofPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false, column=28, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js, function=, line=109, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=95, method=emit, native=false, column=14, file=_stream_readable.js, function=, line=765, method=null, native=false], stack=[TypeError: undefined is not a function,     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:109:20),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.EofPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:128:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16),     at Socket.<anonymous> (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js:109:28),     at Socket.emit (events.js:95:17),     at Socket.<anonymous> (_stream_readable.js:765:14)]
+2016-11-18T08:33:36.886Z - debug: Creating db connection pool
+2016-11-18T08:33:36.946Z - debug: Connecting to the db
+2016-11-18T08:33:36.950Z - debug: Database connection object is [object Object]
+2016-11-18T08:33:36.955Z - info: Listenening on 9095
+2016-11-18T08:33:44.193Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:33:44.193Z - info: Posting feedback and rating
+2016-11-18T08:33:44.193Z - info: Recipe array length is 2
+2016-11-18T08:33:44.193Z - debug: Rating isa:2 ==>2
+2016-11-18T08:33:44.193Z - debug: Rating isb:1 ==>1
+2016-11-18T08:33:44.193Z - debug: Rating sum is 3
+2016-11-18T08:33:44.194Z - debug: Rounding up recipe rating
+2016-11-18T08:33:44.194Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:33:44.194Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:33:44.195Z - debug: Rounded overall rating is 2
+2016-11-18T08:33:44.195Z - debug: Final recipe rating is 1.5
+2016-11-18T08:33:44.195Z - debug: Final rating of order id 2
+2016-11-18T08:33:44.195Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:33:44.195Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:33:44.195Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:33:44.201Z - debug: db connection is released succesfully
+2016-11-18T08:33:44.201Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T08:33:44.201Z - info: Updating email notifications table
+2016-11-18T08:33:44.201Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T08:33:44.205Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}' where id=2000 and restaruent_id=1
+2016-11-18T08:33:44.206Z - debug: db connection is released succesfully
+2016-11-18T08:33:44.209Z - info: Order updated successfully
+2016-11-18T08:33:44.212Z - error: Error while releasing db connection
+2016-11-18T08:33:56.988Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:33:56.988Z - info: Posting feedback and rating
+2016-11-18T08:33:56.988Z - info: Recipe array length is 2
+2016-11-18T08:33:56.988Z - debug: Rating isa:2 ==>2
+2016-11-18T08:33:56.989Z - debug: Rating isb:1 ==>1
+2016-11-18T08:33:56.989Z - debug: Rating sum is 3
+2016-11-18T08:33:56.989Z - debug: Rounding up recipe rating
+2016-11-18T08:33:56.989Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:33:56.989Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:33:56.989Z - debug: Rounded overall rating is 2
+2016-11-18T08:33:56.990Z - debug: Final recipe rating is 1.5
+2016-11-18T08:33:56.990Z - debug: Final rating of order id 2
+2016-11-18T08:33:56.990Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:33:56.990Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:33:56.990Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:33:56.993Z - error: Error while releasing db connection
+2016-11-18T08:33:56.994Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:35:33.591Z - debug: Creating db connection pool
+2016-11-18T08:35:33.650Z - debug: Connecting to the db
+2016-11-18T08:35:33.653Z - debug: Database connection object is [object Object]
+2016-11-18T08:35:33.657Z - info: Listenening on 9095
+2016-11-18T08:35:38.495Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:35:38.495Z - info: Posting feedback and rating
+2016-11-18T08:35:38.495Z - info: Recipe array length is 2
+2016-11-18T08:35:38.495Z - debug: Rating isa:2 ==>2
+2016-11-18T08:35:38.495Z - debug: Rating isb:1 ==>1
+2016-11-18T08:35:38.495Z - debug: Rating sum is 3
+2016-11-18T08:35:38.495Z - debug: Rounding up recipe rating
+2016-11-18T08:35:38.497Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:35:38.497Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:35:38.497Z - debug: Rounded overall rating is 2
+2016-11-18T08:35:38.497Z - debug: Final recipe rating is 1.5
+2016-11-18T08:35:38.497Z - debug: Final rating of order id 2
+2016-11-18T08:35:38.497Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:35:38.498Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:35:38.498Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:35:38.504Z - debug: db connection is released succesfully
+2016-11-18T08:35:38.505Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:35:43.022Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:35:43.023Z - info: Posting feedback and rating
+2016-11-18T08:35:43.023Z - info: Recipe array length is 2
+2016-11-18T08:35:43.023Z - debug: Rating isa:2 ==>2
+2016-11-18T08:35:43.023Z - debug: Rating isb:1 ==>1
+2016-11-18T08:35:43.023Z - debug: Rating sum is 3
+2016-11-18T08:35:43.023Z - debug: Rounding up recipe rating
+2016-11-18T08:35:43.023Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:35:43.023Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:35:43.023Z - debug: Rounded overall rating is 2
+2016-11-18T08:35:43.024Z - debug: Final recipe rating is 1.5
+2016-11-18T08:35:43.024Z - debug: Final rating of order id 2
+2016-11-18T08:35:43.024Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:35:43.024Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:35:43.024Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:35:43.026Z - debug: db connection is released succesfully
+2016-11-18T08:35:43.027Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:35:50.473Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:35:50.473Z - info: Posting feedback and rating
+2016-11-18T08:35:50.473Z - info: Recipe array length is 2
+2016-11-18T08:35:50.473Z - debug: Rating isa:2 ==>2
+2016-11-18T08:35:50.473Z - debug: Rating isb:1 ==>1
+2016-11-18T08:35:50.473Z - debug: Rating sum is 3
+2016-11-18T08:35:50.473Z - debug: Rounding up recipe rating
+2016-11-18T08:35:50.473Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:35:50.473Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:35:50.473Z - debug: Rounded overall rating is 2
+2016-11-18T08:35:50.473Z - debug: Final recipe rating is 1.5
+2016-11-18T08:35:50.474Z - debug: Final rating of order id 2
+2016-11-18T08:35:50.474Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:35:50.474Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:35:50.474Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:35:50.478Z - debug: db connection is released succesfully
+2016-11-18T08:35:50.478Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:38:10.080Z - error: uncaughtException: Unexpected token { date=Fri Nov 18 2016 03:38:10 GMT-0500 (EST), pid=8273, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=25038848, heapTotal=18635008, heapUsed=9939640, loadavg=[0.044921875, 0.0703125, 0.0634765625], uptime=859453.877506575, trace=[column=25, file=module.js, function=Module._compile, line=439, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=312, method=Module._load, native=false, column=17, file=module.js, function=Module.require, line=364, method=require, native=false, column=17, file=module.js, function=require, line=380, method=null, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/server.js, function=, line=25, method=null, native=false, column=26, file=module.js, function=Module._compile, line=456, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=474, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false], stack=[SyntaxError: Unexpected token {,     at Module._compile (module.js:439:25),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:312:12),     at Module.require (module.js:364:17),     at require (module.js:380:17),     at Object.<anonymous> (/home/ec2-user/nodejs/feedback_rating/src/server.js:25:17),     at Module._compile (module.js:456:26),     at Object.Module._extensions..js (module.js:474:10),     at Module.load (module.js:356:32)]
+2016-11-18T08:38:26.596Z - debug: Creating db connection pool
+2016-11-18T08:38:26.653Z - debug: Connecting to the db
+2016-11-18T08:38:26.656Z - debug: Database connection object is [object Object]
+2016-11-18T08:38:26.660Z - info: Listenening on 9095
+2016-11-18T08:38:34.817Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:38:34.817Z - info: Posting feedback and rating
+2016-11-18T08:38:34.817Z - info: Recipe array length is 2
+2016-11-18T08:38:34.817Z - debug: Rating isa:2 ==>2
+2016-11-18T08:38:34.817Z - debug: Rating isb:1 ==>1
+2016-11-18T08:38:34.817Z - debug: Rating sum is 3
+2016-11-18T08:38:34.818Z - debug: Rounding up recipe rating
+2016-11-18T08:38:34.818Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:38:34.819Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:38:34.819Z - debug: Rounded overall rating is 2
+2016-11-18T08:38:34.819Z - debug: Final recipe rating is 1.5
+2016-11-18T08:38:34.819Z - debug: Final rating of order id 2
+2016-11-18T08:38:34.819Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:38:34.819Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:38:34.820Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:38:34.826Z - debug: db connection is released succesfully
+2016-11-18T08:38:34.826Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T08:38:34.826Z - info: Updating email notifications table
+2016-11-18T08:38:34.826Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T08:38:34.829Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}' where id=2000 and restaruent_id=1
+2016-11-18T08:38:34.830Z - debug: db connection is released succesfully
+2016-11-18T08:38:34.833Z - info: Order updated successfully
+2016-11-18T08:38:34.837Z - error: Error while releasing db connection
+2016-11-18T08:39:47.655Z - debug: Creating db connection pool
+2016-11-18T08:39:47.714Z - debug: Connecting to the db
+2016-11-18T08:39:47.717Z - debug: Database connection object is [object Object]
+2016-11-18T08:39:47.721Z - info: Listenening on 9095
+2016-11-18T08:39:58.758Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:39:58.758Z - info: Posting feedback and rating
+2016-11-18T08:39:58.759Z - info: Recipe array length is 2
+2016-11-18T08:39:58.759Z - debug: Rating isa:2 ==>2
+2016-11-18T08:39:58.759Z - debug: Rating isb:1 ==>1
+2016-11-18T08:39:58.759Z - debug: Rating sum is 3
+2016-11-18T08:39:58.759Z - debug: Rounding up recipe rating
+2016-11-18T08:39:58.760Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:39:58.760Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:39:58.760Z - debug: Rounded overall rating is 2
+2016-11-18T08:39:58.760Z - debug: Final recipe rating is 1.5
+2016-11-18T08:39:58.760Z - debug: Final rating of order id 2
+2016-11-18T08:39:58.761Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:39:58.761Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:39:58.761Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:39:58.767Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T08:39:58.767Z - info: Updating email notifications table
+2016-11-18T08:39:58.767Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T08:39:58.768Z - debug: db connection is released succesfully
+2016-11-18T08:39:58.772Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}' where id=2000 and restaruent_id=1
+2016-11-18T08:39:58.772Z - debug: db connection is released succesfully
+2016-11-18T08:39:58.775Z - info: Order updated successfully
+2016-11-18T08:39:58.778Z - error: Error while releasing db connection
+2016-11-18T08:40:36.696Z - debug: Creating db connection pool
+2016-11-18T08:40:36.754Z - debug: Connecting to the db
+2016-11-18T08:40:36.757Z - debug: Database connection object is [object Object]
+2016-11-18T08:40:36.762Z - info: Listenening on 9095
+2016-11-18T08:40:39.160Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:40:39.160Z - info: Posting feedback and rating
+2016-11-18T08:40:39.160Z - info: Recipe array length is 2
+2016-11-18T08:40:39.160Z - debug: Rating isa:2 ==>2
+2016-11-18T08:40:39.160Z - debug: Rating isb:1 ==>1
+2016-11-18T08:40:39.160Z - debug: Rating sum is 3
+2016-11-18T08:40:39.161Z - debug: Rounding up recipe rating
+2016-11-18T08:40:39.161Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:40:39.162Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:40:39.162Z - debug: Rounded overall rating is 2
+2016-11-18T08:40:39.162Z - debug: Final recipe rating is 1.5
+2016-11-18T08:40:39.162Z - debug: Final rating of order id 2
+2016-11-18T08:40:39.162Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:40:39.162Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:40:39.162Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:40:39.169Z - debug: db connection is released succesfully
+2016-11-18T08:41:35.558Z - debug: Creating db connection pool
+2016-11-18T08:41:35.616Z - debug: Connecting to the db
+2016-11-18T08:41:35.619Z - debug: Database connection object is [object Object]
+2016-11-18T08:41:35.624Z - info: Listenening on 9095
+2016-11-18T08:41:39.361Z - info: Getting order details of 20100
+2016-11-18T08:41:39.361Z - debug: Executing=> select *from orders where id=20100 and restaruent_id=1
+2016-11-18T08:41:39.367Z - debug: Order does not exist =>20100
+2016-11-18T08:41:39.370Z - debug: db connection is released succesfully
+2016-11-18T08:41:49.101Z - info: Getting order details of 2000
+2016-11-18T08:41:49.101Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T08:41:49.104Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 2, \"economy\": 2, \"ambience\": 2, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:2\", \"b:1\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 2, \"overall_recipe_rating\": 1.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T08:41:49.105Z - debug: db connection is released succesfully
+2016-11-18T08:41:54.628Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:41:54.629Z - info: Posting feedback and rating
+2016-11-18T08:41:54.629Z - info: Recipe array length is 2
+2016-11-18T08:41:54.629Z - debug: Rating isa:2 ==>2
+2016-11-18T08:41:54.629Z - debug: Rating isb:1 ==>1
+2016-11-18T08:41:54.629Z - debug: Rating sum is 3
+2016-11-18T08:41:54.629Z - debug: Rounding up recipe rating
+2016-11-18T08:41:54.630Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:41:54.630Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:41:54.630Z - debug: Rounded overall rating is 2
+2016-11-18T08:41:54.631Z - debug: Final recipe rating is 1.5
+2016-11-18T08:41:54.631Z - debug: Final rating of order id 2
+2016-11-18T08:41:54.631Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:41:54.631Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:41:54.631Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:41:54.634Z - debug: db connection is released succesfully
+2016-11-18T08:42:05.018Z - debug: Creating db connection pool
+2016-11-18T08:42:05.077Z - debug: Connecting to the db
+2016-11-18T08:42:05.080Z - debug: Database connection object is [object Object]
+2016-11-18T08:42:05.084Z - info: Listenening on 9095
+2016-11-18T08:42:05.607Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:42:05.607Z - info: Posting feedback and rating
+2016-11-18T08:42:05.608Z - info: Recipe array length is 2
+2016-11-18T08:42:05.608Z - debug: Rating isa:2 ==>2
+2016-11-18T08:42:05.608Z - debug: Rating isb:1 ==>1
+2016-11-18T08:42:05.608Z - debug: Rating sum is 3
+2016-11-18T08:42:05.608Z - debug: Rounding up recipe rating
+2016-11-18T08:42:05.609Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:42:05.609Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:42:05.609Z - debug: Rounded overall rating is 2
+2016-11-18T08:42:05.609Z - debug: Final recipe rating is 1.5
+2016-11-18T08:42:05.609Z - debug: Final rating of order id 2
+2016-11-18T08:42:05.610Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:42:05.610Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:42:05.610Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:42:05.617Z - debug: db connection is released succesfully
+2016-11-18T08:43:33.212Z - debug: Creating db connection pool
+2016-11-18T08:43:33.271Z - debug: Connecting to the db
+2016-11-18T08:43:33.275Z - debug: Database connection object is [object Object]
+2016-11-18T08:43:33.280Z - info: Listenening on 9095
+2016-11-18T08:43:37.442Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:43:37.442Z - info: Posting feedback and rating
+2016-11-18T08:43:37.442Z - info: Recipe array length is 2
+2016-11-18T08:43:37.442Z - debug: Rating isa:2 ==>2
+2016-11-18T08:43:37.443Z - debug: Rating isb:1 ==>1
+2016-11-18T08:43:37.443Z - debug: Rating sum is 3
+2016-11-18T08:43:37.443Z - debug: Rounding up recipe rating
+2016-11-18T08:43:37.444Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:43:37.444Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:43:37.444Z - debug: Rounded overall rating is 2
+2016-11-18T08:43:37.444Z - debug: Final recipe rating is 1.5
+2016-11-18T08:43:37.444Z - debug: Final rating of order id 2
+2016-11-18T08:43:37.444Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:43:37.445Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:43:37.445Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:43:37.452Z - debug: db connection is released succesfully
+2016-11-18T08:44:48.963Z - debug: Creating db connection pool
+2016-11-18T08:44:49.022Z - debug: Connecting to the db
+2016-11-18T08:44:49.026Z - debug: Database connection object is [object Object]
+2016-11-18T08:44:49.030Z - info: Listenening on 9095
+2016-11-18T08:44:52.188Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:44:52.189Z - info: Posting feedback and rating
+2016-11-18T08:44:52.189Z - info: Recipe array length is 2
+2016-11-18T08:44:52.189Z - debug: Rating isa:2 ==>2
+2016-11-18T08:44:52.189Z - debug: Rating isb:1 ==>1
+2016-11-18T08:44:52.189Z - debug: Rating sum is 3
+2016-11-18T08:44:52.189Z - debug: Rounding up recipe rating
+2016-11-18T08:44:52.190Z - debug: Rounded recipe rating is 1.5
+2016-11-18T08:44:52.190Z - debug: Rounding up overall  rating.Wihout rounding is 1.875
+2016-11-18T08:44:52.190Z - debug: Rounded overall rating is 2
+2016-11-18T08:44:52.191Z - debug: Final recipe rating is 1.5
+2016-11-18T08:44:52.191Z - debug: Final rating of order id 2
+2016-11-18T08:44:52.191Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":2,"ambience":2,"qos":2,"recipe_rating":["a:2","b:1"],"overall_recipe_rating":1.5,"overall_order_rating":2}
+2016-11-18T08:44:52.191Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:44:52.191Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:44:52.198Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:44:52.201Z - debug: db connection is released succesfully
+2016-11-18T08:45:51.800Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:45:51.801Z - info: Posting feedback and rating
+2016-11-18T08:45:51.801Z - info: Recipe array length is 2
+2016-11-18T08:45:51.801Z - debug: Rating isa:3 ==>3
+2016-11-18T08:45:51.801Z - debug: Rating isb:3 ==>3
+2016-11-18T08:45:51.801Z - debug: Rating sum is 6
+2016-11-18T08:45:51.801Z - debug: Rounding up recipe rating
+2016-11-18T08:45:51.801Z - debug: Rounded recipe rating is 3
+2016-11-18T08:45:51.801Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T08:45:51.801Z - debug: Rounded overall rating is 3
+2016-11-18T08:45:51.801Z - debug: Final recipe rating is 3
+2016-11-18T08:45:51.801Z - debug: Final rating of order id 3
+2016-11-18T08:45:51.802Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T08:45:51.802Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:45:51.802Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:45:51.804Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T08:45:51.804Z - info: Updating email notifications table
+2016-11-18T08:45:51.804Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T08:45:51.805Z - debug: db connection is released succesfully
+2016-11-18T08:45:51.809Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T08:45:51.809Z - debug: db connection is released succesfully
+2016-11-18T08:45:51.812Z - info: Order updated successfully
+2016-11-18T08:45:51.813Z - error: Error while releasing db connection
+2016-11-18T08:45:59.099Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:45:59.099Z - info: Posting feedback and rating
+2016-11-18T08:45:59.100Z - info: Recipe array length is 2
+2016-11-18T08:45:59.100Z - debug: Rating isa:3 ==>3
+2016-11-18T08:45:59.100Z - debug: Rating isb:3 ==>3
+2016-11-18T08:45:59.100Z - debug: Rating sum is 6
+2016-11-18T08:45:59.100Z - debug: Rounding up recipe rating
+2016-11-18T08:45:59.101Z - debug: Rounded recipe rating is 3
+2016-11-18T08:45:59.101Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T08:45:59.101Z - debug: Rounded overall rating is 3
+2016-11-18T08:45:59.101Z - debug: Final recipe rating is 3
+2016-11-18T08:45:59.101Z - debug: Final rating of order id 3
+2016-11-18T08:45:59.101Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T08:45:59.103Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:45:59.103Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:45:59.105Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:45:59.105Z - error: Error while releasing db connection
+2016-11-18T08:46:06.604Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:46:06.604Z - info: Posting feedback and rating
+2016-11-18T08:46:06.605Z - info: Recipe array length is 2
+2016-11-18T08:46:06.605Z - debug: Rating isa:3 ==>3
+2016-11-18T08:46:06.605Z - debug: Rating isb:3 ==>3
+2016-11-18T08:46:06.605Z - debug: Rating sum is 6
+2016-11-18T08:46:06.606Z - debug: Rounding up recipe rating
+2016-11-18T08:46:06.606Z - debug: Rounded recipe rating is 3
+2016-11-18T08:46:06.606Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T08:46:06.606Z - debug: Rounded overall rating is 3
+2016-11-18T08:46:06.606Z - debug: Final recipe rating is 3
+2016-11-18T08:46:06.606Z - debug: Final rating of order id 3
+2016-11-18T08:46:06.606Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T08:46:06.606Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:46:06.606Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:46:06.608Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:46:06.608Z - error: Error while releasing db connection
+2016-11-18T08:46:20.520Z - debug: Creating db connection pool
+2016-11-18T08:46:20.578Z - debug: Connecting to the db
+2016-11-18T08:46:20.582Z - debug: Database connection object is [object Object]
+2016-11-18T08:46:20.586Z - info: Listenening on 9095
+2016-11-18T08:46:22.331Z - info: Feedback request detail=>[object Object]
+2016-11-18T08:46:22.332Z - info: Posting feedback and rating
+2016-11-18T08:46:22.332Z - info: Recipe array length is 2
+2016-11-18T08:46:22.332Z - debug: Rating isa:3 ==>3
+2016-11-18T08:46:22.332Z - debug: Rating isb:3 ==>3
+2016-11-18T08:46:22.332Z - debug: Rating sum is 6
+2016-11-18T08:46:22.332Z - debug: Rounding up recipe rating
+2016-11-18T08:46:22.333Z - debug: Rounded recipe rating is 3
+2016-11-18T08:46:22.333Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T08:46:22.333Z - debug: Rounded overall rating is 3
+2016-11-18T08:46:22.333Z - debug: Final recipe rating is 3
+2016-11-18T08:46:22.334Z - debug: Final rating of order id 3
+2016-11-18T08:46:22.334Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T08:46:22.334Z - debug: Checking whether order has already received feedback.
+2016-11-18T08:46:22.334Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T08:46:22.341Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T08:46:22.344Z - debug: db connection is released succesfully
+2016-11-18T09:02:03.454Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:02:03.454Z - info: Posting feedback and rating
+2016-11-18T09:02:03.454Z - info: Recipe array length is 2
+2016-11-18T09:02:03.455Z - debug: Rating isa:3 ==>3
+2016-11-18T09:02:03.455Z - debug: Rating isb:3 ==>3
+2016-11-18T09:02:03.455Z - debug: Rating sum is 6
+2016-11-18T09:02:03.455Z - debug: Rounding up recipe rating
+2016-11-18T09:02:03.455Z - debug: Rounded recipe rating is 3
+2016-11-18T09:02:03.455Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:02:03.455Z - debug: Rounded overall rating is 3
+2016-11-18T09:02:03.455Z - debug: Final recipe rating is 3
+2016-11-18T09:02:03.455Z - debug: Final rating of order id 3
+2016-11-18T09:02:03.455Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:02:03.456Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:02:03.456Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:02:03.458Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:02:03.459Z - debug: db connection is released succesfully
+2016-11-18T09:04:41.584Z - debug: Creating db connection pool
+2016-11-18T09:04:41.642Z - debug: Connecting to the db
+2016-11-18T09:04:41.645Z - debug: Database connection object is [object Object]
+2016-11-18T09:04:41.652Z - info: Listenening on 9095
+2016-11-18T09:04:55.583Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:04:55.584Z - info: Posting feedback and rating
+2016-11-18T09:04:55.584Z - info: Recipe array length is 2
+2016-11-18T09:04:55.584Z - debug: Rating isa:3 ==>3
+2016-11-18T09:04:55.584Z - debug: Rating isb:3 ==>3
+2016-11-18T09:04:55.584Z - debug: Rating sum is 6
+2016-11-18T09:04:55.584Z - debug: Rounding up recipe rating
+2016-11-18T09:04:55.585Z - debug: Rounded recipe rating is 3
+2016-11-18T09:04:55.585Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:04:55.585Z - debug: Rounded overall rating is 3
+2016-11-18T09:04:55.585Z - debug: Final recipe rating is 3
+2016-11-18T09:04:55.585Z - debug: Final rating of order id 3
+2016-11-18T09:04:55.586Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:04:55.586Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:04:55.586Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:04:55.591Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:04:55.592Z - info: Updating email notifications table
+2016-11-18T09:04:55.592Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:04:55.592Z - debug: db connection is released succesfully
+2016-11-18T09:04:55.597Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:04:55.597Z - debug: db connection is released succesfully
+2016-11-18T09:04:55.599Z - info: Order updated successfully
+2016-11-18T09:04:55.603Z - error: Error while releasing db connection
+2016-11-18T09:07:06.881Z - debug: Creating db connection pool
+2016-11-18T09:07:06.940Z - debug: Connecting to the db
+2016-11-18T09:07:06.944Z - debug: Database connection object is [object Object]
+2016-11-18T09:07:06.949Z - info: Listenening on 9095
+2016-11-18T09:07:13.154Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:07:13.154Z - info: Posting feedback and rating
+2016-11-18T09:07:13.154Z - info: Recipe array length is 2
+2016-11-18T09:07:13.154Z - debug: Rating isa:3 ==>3
+2016-11-18T09:07:13.154Z - debug: Rating isb:3 ==>3
+2016-11-18T09:07:13.154Z - debug: Rating sum is 6
+2016-11-18T09:07:13.155Z - debug: Rounding up recipe rating
+2016-11-18T09:07:13.155Z - debug: Rounded recipe rating is 3
+2016-11-18T09:07:13.156Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:07:13.156Z - debug: Rounded overall rating is 3
+2016-11-18T09:07:13.156Z - debug: Final recipe rating is 3
+2016-11-18T09:07:13.156Z - debug: Final rating of order id 3
+2016-11-18T09:07:13.156Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:07:13.156Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:07:13.156Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:07:13.162Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:07:13.164Z - info: Updating email notifications table
+2016-11-18T09:07:13.164Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:07:13.164Z - debug: db connection is released succesfully
+2016-11-18T09:07:13.169Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:07:13.169Z - debug: db connection is released succesfully
+2016-11-18T09:07:13.173Z - info: Order updated successfully
+2016-11-18T09:07:13.175Z - error: Error while releasing db connection.Connection release value =>1
+2016-11-18T09:07:32.741Z - info: Getting order details of 2000
+2016-11-18T09:07:32.742Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:32.744Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:32.745Z - error: Error while releasing db connection.Connection release value =>1
+2016-11-18T09:07:39.675Z - info: Getting order details of 2000
+2016-11-18T09:07:39.676Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:39.678Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:39.678Z - error: Error while releasing db connection.Connection release value =>1
+2016-11-18T09:07:45.238Z - debug: Creating db connection pool
+2016-11-18T09:07:45.296Z - debug: Connecting to the db
+2016-11-18T09:07:45.299Z - debug: Database connection object is [object Object]
+2016-11-18T09:07:45.304Z - info: Listenening on 9095
+2016-11-18T09:07:49.294Z - info: Getting order details of 2000
+2016-11-18T09:07:49.295Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:49.302Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:49.305Z - debug: db connection is released succesfully
+2016-11-18T09:07:52.113Z - info: Getting order details of 2000
+2016-11-18T09:07:52.113Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:52.115Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:52.116Z - debug: db connection is released succesfully
+2016-11-18T09:07:55.015Z - info: Getting order details of 2000
+2016-11-18T09:07:55.015Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:55.017Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:55.017Z - debug: db connection is released succesfully
+2016-11-18T09:07:55.993Z - info: Getting order details of 2000
+2016-11-18T09:07:55.993Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:07:55.995Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:07:55.995Z - debug: db connection is released succesfully
+2016-11-18T09:07:59.839Z - debug: Creating db connection pool
+2016-11-18T09:07:59.895Z - debug: Connecting to the db
+2016-11-18T09:07:59.898Z - debug: Database connection object is [object Object]
+2016-11-18T09:07:59.903Z - info: Listenening on 9095
+2016-11-18T09:08:01.850Z - info: Getting order details of 2000
+2016-11-18T09:08:01.850Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:08:01.857Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:08:01.861Z - debug: db connection is released succesfully
+2016-11-18T09:08:03.948Z - info: Getting order details of 2000
+2016-11-18T09:08:03.949Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:08:03.951Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:08:03.952Z - debug: db connection is released succesfully
+2016-11-18T09:16:02.699Z - debug: Creating db connection pool
+2016-11-18T09:16:02.757Z - debug: Connecting to the db
+2016-11-18T09:16:02.761Z - debug: Database connection object is [object Object]
+2016-11-18T09:16:02.765Z - info: Listenening on 9095
+2016-11-18T09:16:06.858Z - info: Getting order details of 2000
+2016-11-18T09:16:06.859Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:16:06.866Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:16:06.870Z - debug: db connection is released succesfully
+2016-11-18T09:16:08.980Z - info: Getting order details of 2000
+2016-11-18T09:16:08.981Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:16:08.983Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:16:08.984Z - debug: db connection is released succesfully
+2016-11-18T09:16:15.081Z - info: Getting order details of 2000
+2016-11-18T09:16:15.081Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:16:15.082Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:16:15.083Z - debug: db connection is released succesfully
+2016-11-18T09:16:24.646Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:16:24.646Z - info: Posting feedback and rating
+2016-11-18T09:16:24.646Z - info: Recipe array length is 2
+2016-11-18T09:16:24.646Z - debug: Rating isa:3 ==>3
+2016-11-18T09:16:24.646Z - debug: Rating isb:3 ==>3
+2016-11-18T09:16:24.646Z - debug: Rating sum is 6
+2016-11-18T09:16:24.646Z - debug: Rounding up recipe rating
+2016-11-18T09:16:24.647Z - debug: Rounded recipe rating is 3
+2016-11-18T09:16:24.647Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:16:24.648Z - debug: Rounded overall rating is 3
+2016-11-18T09:16:24.648Z - debug: Final recipe rating is 3
+2016-11-18T09:16:24.648Z - debug: Final rating of order id 3
+2016-11-18T09:16:24.648Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:16:24.648Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:16:24.648Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:16:24.651Z - debug: db connection is released succesfully
+2016-11-18T09:16:24.651Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:16:24.651Z - info: Updating email notifications table
+2016-11-18T09:16:24.651Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:16:24.655Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:16:24.655Z - debug: db connection is released succesfully
+2016-11-18T09:16:24.659Z - info: Order updated successfully
+2016-11-18T09:16:24.663Z - error: uncaughtException: Connection already released date=Fri Nov 18 2016 04:16:24 GMT-0500 (EST), pid=8458, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=37335040, heapTotal=30107392, heapUsed=16981656, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=861748.460299734, trace=[column=13, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js, function=Pool.releaseConnection, line=137, method=releaseConnection, native=false, column=15, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js, function=PoolConnection.release, line=42, method=release, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=releaseDbCon, line=39, method=null, native=false, column=25, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=78, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=10, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.OkPacket, line=78, method=OkPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false], stack=[Error: Connection already released,     at Pool.releaseConnection (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js:137:13),     at PoolConnection.release (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js:42:15),     at releaseDbCon (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:39:17),     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:78:25),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.OkPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:78:10),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16)]
+2016-11-18T09:16:44.861Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:16:44.861Z - info: Posting feedback and rating
+2016-11-18T09:16:44.862Z - info: Recipe array length is 2
+2016-11-18T09:16:44.862Z - debug: Rating isa:3 ==>3
+2016-11-18T09:16:44.862Z - debug: Rating isb:3 ==>3
+2016-11-18T09:16:44.862Z - debug: Rating sum is 6
+2016-11-18T09:16:44.862Z - debug: Rounding up recipe rating
+2016-11-18T09:16:44.862Z - debug: Rounded recipe rating is 3
+2016-11-18T09:16:44.862Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:16:44.863Z - debug: Rounded overall rating is 3
+2016-11-18T09:16:44.863Z - debug: Final recipe rating is 3
+2016-11-18T09:16:44.863Z - debug: Final rating of order id 3
+2016-11-18T09:16:44.863Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:16:44.863Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:16:44.863Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:16:44.867Z - error: uncaughtException: Connection already released date=Fri Nov 18 2016 04:16:44 GMT-0500 (EST), pid=8458, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=37875712, heapTotal=30107392, heapUsed=17605832, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=861768.667036771, trace=[column=13, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js, function=Pool.releaseConnection, line=137, method=releaseConnection, native=false, column=15, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js, function=PoolConnection.release, line=42, method=release, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=releaseDbCon, line=39, method=null, native=false, column=4, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=106, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.EofPacket, line=128, method=EofPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false], stack=[Error: Connection already released,     at Pool.releaseConnection (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js:137:13),     at PoolConnection.release (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js:42:15),     at releaseDbCon (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:39:17),     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:106:4),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.EofPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:128:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16)]
+2016-11-18T09:17:09.262Z - debug: Creating db connection pool
+2016-11-18T09:17:09.322Z - debug: Connecting to the db
+2016-11-18T09:17:09.325Z - debug: Database connection object is [object Object]
+2016-11-18T09:17:09.330Z - info: Listenening on 9095
+2016-11-18T09:17:13.338Z - info: Getting order details of 2000
+2016-11-18T09:17:13.339Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:17:13.346Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:17:13.349Z - debug: db connection is released succesfully
+2016-11-18T09:17:15.491Z - info: Getting order details of 2000
+2016-11-18T09:17:15.491Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:17:15.494Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:17:15.495Z - debug: db connection is released succesfully
+2016-11-18T09:17:22.596Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:17:22.596Z - info: Posting feedback and rating
+2016-11-18T09:17:22.596Z - info: Recipe array length is 2
+2016-11-18T09:17:22.596Z - debug: Rating isa:3 ==>3
+2016-11-18T09:17:22.596Z - debug: Rating isb:3 ==>3
+2016-11-18T09:17:22.597Z - debug: Rating sum is 6
+2016-11-18T09:17:22.597Z - debug: Rounding up recipe rating
+2016-11-18T09:17:22.597Z - debug: Rounded recipe rating is 3
+2016-11-18T09:17:22.598Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:17:22.598Z - debug: Rounded overall rating is 3
+2016-11-18T09:17:22.598Z - debug: Final recipe rating is 3
+2016-11-18T09:17:22.598Z - debug: Final rating of order id 3
+2016-11-18T09:17:22.598Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:17:22.598Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:17:22.598Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:17:22.600Z - debug: db connection is released succesfully
+2016-11-18T09:17:22.601Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:17:26.731Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:17:26.731Z - info: Posting feedback and rating
+2016-11-18T09:17:26.731Z - info: Recipe array length is 2
+2016-11-18T09:17:26.731Z - debug: Rating isa:3 ==>3
+2016-11-18T09:17:26.731Z - debug: Rating isb:3 ==>3
+2016-11-18T09:17:26.731Z - debug: Rating sum is 6
+2016-11-18T09:17:26.731Z - debug: Rounding up recipe rating
+2016-11-18T09:17:26.732Z - debug: Rounded recipe rating is 3
+2016-11-18T09:17:26.732Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:17:26.732Z - debug: Rounded overall rating is 3
+2016-11-18T09:17:26.732Z - debug: Final recipe rating is 3
+2016-11-18T09:17:26.732Z - debug: Final rating of order id 3
+2016-11-18T09:17:26.732Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:17:26.732Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:17:26.733Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:17:26.734Z - debug: db connection is released succesfully
+2016-11-18T09:17:26.735Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:17:33.554Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:17:33.554Z - info: Posting feedback and rating
+2016-11-18T09:17:33.555Z - info: Recipe array length is 2
+2016-11-18T09:17:33.555Z - debug: Rating isa:3 ==>3
+2016-11-18T09:17:33.555Z - debug: Rating isb:3 ==>3
+2016-11-18T09:17:33.555Z - debug: Rating sum is 6
+2016-11-18T09:17:33.555Z - debug: Rounding up recipe rating
+2016-11-18T09:17:33.555Z - debug: Rounded recipe rating is 3
+2016-11-18T09:17:33.555Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:17:33.555Z - debug: Rounded overall rating is 3
+2016-11-18T09:17:33.557Z - debug: Final recipe rating is 3
+2016-11-18T09:17:33.557Z - debug: Final rating of order id 3
+2016-11-18T09:17:33.557Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:17:33.557Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:17:33.557Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:17:33.559Z - debug: db connection is released succesfully
+2016-11-18T09:17:33.560Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:17:41.126Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:17:41.127Z - info: Posting feedback and rating
+2016-11-18T09:17:41.127Z - info: Recipe array length is 2
+2016-11-18T09:17:41.127Z - debug: Rating isa:3 ==>3
+2016-11-18T09:17:41.127Z - debug: Rating isb:3 ==>3
+2016-11-18T09:17:41.128Z - debug: Rating sum is 6
+2016-11-18T09:17:41.128Z - debug: Rounding up recipe rating
+2016-11-18T09:17:41.128Z - debug: Rounded recipe rating is 3
+2016-11-18T09:17:41.128Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:17:41.128Z - debug: Rounded overall rating is 3
+2016-11-18T09:17:41.128Z - debug: Final recipe rating is 3
+2016-11-18T09:17:41.128Z - debug: Final rating of order id 3
+2016-11-18T09:17:41.128Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:17:41.128Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:17:41.128Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:17:41.130Z - debug: db connection is released succesfully
+2016-11-18T09:17:41.130Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:17:41.130Z - info: Updating email notifications table
+2016-11-18T09:17:41.130Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:17:41.133Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:17:41.134Z - debug: db connection is released succesfully
+2016-11-18T09:17:41.137Z - info: Order updated successfully
+2016-11-18T09:17:41.142Z - error: uncaughtException: Connection already released date=Fri Nov 18 2016 04:17:41 GMT-0500 (EST), pid=8464, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=39272448, heapTotal=30107392, heapUsed=17642944, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=861824.938817182, trace=[column=13, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js, function=Pool.releaseConnection, line=137, method=releaseConnection, native=false, column=15, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js, function=PoolConnection.release, line=42, method=release, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=releaseDbCon, line=39, method=null, native=false, column=25, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=78, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=10, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.OkPacket, line=78, method=OkPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false], stack=[Error: Connection already released,     at Pool.releaseConnection (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js:137:13),     at PoolConnection.release (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js:42:15),     at releaseDbCon (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:39:17),     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:78:25),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.OkPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:78:10),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16)]
+2016-11-18T09:18:24.719Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:18:24.719Z - info: Posting feedback and rating
+2016-11-18T09:18:24.719Z - info: Recipe array length is 2
+2016-11-18T09:18:24.719Z - debug: Rating isa:3 ==>3
+2016-11-18T09:18:24.720Z - debug: Rating isb:3 ==>3
+2016-11-18T09:18:24.720Z - debug: Rating sum is 6
+2016-11-18T09:18:24.720Z - debug: Rounding up recipe rating
+2016-11-18T09:18:24.720Z - debug: Rounded recipe rating is 3
+2016-11-18T09:18:24.720Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:18:24.720Z - debug: Rounded overall rating is 3
+2016-11-18T09:18:24.720Z - debug: Final recipe rating is 3
+2016-11-18T09:18:24.721Z - debug: Final rating of order id 3
+2016-11-18T09:18:24.721Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:18:24.721Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:18:24.721Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:18:24.724Z - error: uncaughtException: Connection already released date=Fri Nov 18 2016 04:18:24 GMT-0500 (EST), pid=8464, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=39538688, heapTotal=30107392, heapUsed=18201264, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=861868.522884532, trace=[column=13, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js, function=Pool.releaseConnection, line=137, method=releaseConnection, native=false, column=15, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js, function=PoolConnection.release, line=42, method=release, native=false, column=17, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=releaseDbCon, line=39, method=null, native=false, column=4, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js, function=Query._callback, line=106, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.EofPacket, line=128, method=EofPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false], stack=[Error: Connection already released,     at Pool.releaseConnection (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Pool.js:137:13),     at PoolConnection.release (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/PoolConnection.js:42:15),     at releaseDbCon (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:39:17),     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/common_methods/commonMethods.js:106:4),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.EofPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:128:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16)]
+2016-11-18T09:24:20.173Z - debug: Creating db connection pool
+2016-11-18T09:24:20.232Z - debug: Connecting to the db
+2016-11-18T09:24:20.235Z - debug: Database connection object is [object Object]
+2016-11-18T09:24:20.240Z - info: Listenening on 9095
+2016-11-18T09:24:27.171Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:24:27.171Z - info: Posting feedback and rating
+2016-11-18T09:24:27.171Z - info: Recipe array length is 2
+2016-11-18T09:24:27.171Z - debug: Rating isa:3 ==>3
+2016-11-18T09:24:27.171Z - debug: Rating isb:3 ==>3
+2016-11-18T09:24:27.171Z - debug: Rating sum is 6
+2016-11-18T09:24:27.171Z - debug: Rounding up recipe rating
+2016-11-18T09:24:27.172Z - debug: Rounded recipe rating is 3
+2016-11-18T09:24:27.172Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:24:27.173Z - debug: Rounded overall rating is 3
+2016-11-18T09:24:27.173Z - debug: Final recipe rating is 3
+2016-11-18T09:24:27.173Z - debug: Final rating of order id 3
+2016-11-18T09:24:27.173Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:24:27.173Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:24:27.173Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:24:27.179Z - debug: db connection is released succesfully
+2016-11-18T09:24:27.179Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:24:27.180Z - info: Updating email notifications table
+2016-11-18T09:24:27.180Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:24:27.183Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:24:27.184Z - debug: db connection is released succesfully
+2016-11-18T09:24:27.187Z - info: Order updated successfully
+2016-11-18T09:24:27.190Z - debug: db connection is released succesfully
+2016-11-18T09:24:30.987Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:24:30.987Z - info: Posting feedback and rating
+2016-11-18T09:24:30.987Z - info: Recipe array length is 2
+2016-11-18T09:24:30.987Z - debug: Rating isa:3 ==>3
+2016-11-18T09:24:30.987Z - debug: Rating isb:3 ==>3
+2016-11-18T09:24:30.987Z - debug: Rating sum is 6
+2016-11-18T09:24:30.988Z - debug: Rounding up recipe rating
+2016-11-18T09:24:30.988Z - debug: Rounded recipe rating is 3
+2016-11-18T09:24:30.988Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:24:30.988Z - debug: Rounded overall rating is 3
+2016-11-18T09:24:30.988Z - debug: Final recipe rating is 3
+2016-11-18T09:24:30.988Z - debug: Final rating of order id 3
+2016-11-18T09:24:30.988Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:24:30.988Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:24:30.989Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:24:30.991Z - debug: db connection is released succesfully
+2016-11-18T09:24:30.991Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:24:43.980Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:24:43.981Z - info: Posting feedback and rating
+2016-11-18T09:24:43.981Z - info: Recipe array length is 2
+2016-11-18T09:24:43.981Z - debug: Rating isa:3 ==>3
+2016-11-18T09:24:43.981Z - debug: Rating isb:3 ==>3
+2016-11-18T09:24:43.981Z - debug: Rating sum is 6
+2016-11-18T09:24:43.981Z - debug: Rounding up recipe rating
+2016-11-18T09:24:43.982Z - debug: Rounded recipe rating is 3
+2016-11-18T09:24:43.982Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:24:43.982Z - debug: Rounded overall rating is 3
+2016-11-18T09:24:43.982Z - debug: Final recipe rating is 3
+2016-11-18T09:24:43.982Z - debug: Final rating of order id 3
+2016-11-18T09:24:43.982Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:24:43.984Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:24:43.984Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:24:43.987Z - debug: db connection is released succesfully
+2016-11-18T09:24:43.987Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:24:44.658Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:24:44.659Z - info: Posting feedback and rating
+2016-11-18T09:24:44.659Z - info: Recipe array length is 2
+2016-11-18T09:24:44.659Z - debug: Rating isa:3 ==>3
+2016-11-18T09:24:44.659Z - debug: Rating isb:3 ==>3
+2016-11-18T09:24:44.659Z - debug: Rating sum is 6
+2016-11-18T09:24:44.660Z - debug: Rounding up recipe rating
+2016-11-18T09:24:44.660Z - debug: Rounded recipe rating is 3
+2016-11-18T09:24:44.660Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:24:44.660Z - debug: Rounded overall rating is 3
+2016-11-18T09:24:44.660Z - debug: Final recipe rating is 3
+2016-11-18T09:24:44.660Z - debug: Final rating of order id 3
+2016-11-18T09:24:44.660Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:24:44.660Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:24:44.660Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:24:44.662Z - debug: db connection is released succesfully
+2016-11-18T09:24:44.662Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:24:45.337Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:24:45.338Z - info: Posting feedback and rating
+2016-11-18T09:24:45.338Z - info: Recipe array length is 2
+2016-11-18T09:24:45.338Z - debug: Rating isa:3 ==>3
+2016-11-18T09:24:45.338Z - debug: Rating isb:3 ==>3
+2016-11-18T09:24:45.338Z - debug: Rating sum is 6
+2016-11-18T09:24:45.338Z - debug: Rounding up recipe rating
+2016-11-18T09:24:45.338Z - debug: Rounded recipe rating is 3
+2016-11-18T09:24:45.338Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:24:45.338Z - debug: Rounded overall rating is 3
+2016-11-18T09:24:45.338Z - debug: Final recipe rating is 3
+2016-11-18T09:24:45.338Z - debug: Final rating of order id 3
+2016-11-18T09:24:45.339Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:24:45.339Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:24:45.339Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:24:45.340Z - debug: db connection is released succesfully
+2016-11-18T09:24:45.340Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:24:50.861Z - debug: Creating db connection pool
+2016-11-18T09:24:50.919Z - debug: Connecting to the db
+2016-11-18T09:24:50.923Z - debug: Database connection object is [object Object]
+2016-11-18T09:24:50.927Z - info: Listenening on 9095
+2016-11-18T09:27:06.129Z - debug: Creating db connection pool
+2016-11-18T09:27:06.189Z - debug: Connecting to the db
+2016-11-18T09:27:06.192Z - debug: Database connection object is [object Object]
+2016-11-18T09:27:06.197Z - info: Listenening on 9095
+2016-11-18T09:27:12.114Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:27:12.114Z - info: Posting feedback and rating
+2016-11-18T09:27:12.114Z - info: Recipe array length is 2
+2016-11-18T09:27:12.114Z - debug: Rating isa:3 ==>3
+2016-11-18T09:27:12.114Z - debug: Rating isb:3 ==>3
+2016-11-18T09:27:12.114Z - debug: Rating sum is 6
+2016-11-18T09:27:12.114Z - debug: Rounding up recipe rating
+2016-11-18T09:27:12.115Z - debug: Rounded recipe rating is 3
+2016-11-18T09:27:12.115Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:27:12.116Z - debug: Rounded overall rating is 3
+2016-11-18T09:27:12.116Z - debug: Final recipe rating is 3
+2016-11-18T09:27:12.116Z - debug: Final rating of order id 3
+2016-11-18T09:27:12.116Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:27:12.116Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:27:12.116Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:27:12.122Z - debug: db connection is released succesfully
+2016-11-18T09:27:12.122Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:27:12.122Z - info: Updating email notifications table
+2016-11-18T09:27:12.122Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:27:12.126Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:27:12.127Z - debug: db connection is released succesfully
+2016-11-18T09:27:12.130Z - info: Order updated successfully
+2016-11-18T09:27:12.133Z - debug: Called connection.release() again to confirm whether connection is closed.Since 'dbUtil.pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:27:12.133Z - debug: db connection is released succesfully
+2016-11-18T09:27:19.843Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:27:19.844Z - info: Posting feedback and rating
+2016-11-18T09:27:19.844Z - info: Recipe array length is 2
+2016-11-18T09:27:19.844Z - debug: Rating isa:3 ==>3
+2016-11-18T09:27:19.844Z - debug: Rating isb:3 ==>3
+2016-11-18T09:27:19.844Z - debug: Rating sum is 6
+2016-11-18T09:27:19.844Z - debug: Rounding up recipe rating
+2016-11-18T09:27:19.845Z - debug: Rounded recipe rating is 3
+2016-11-18T09:27:19.845Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:27:19.845Z - debug: Rounded overall rating is 3
+2016-11-18T09:27:19.845Z - debug: Final recipe rating is 3
+2016-11-18T09:27:19.845Z - debug: Final rating of order id 3
+2016-11-18T09:27:19.845Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:27:19.845Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:27:19.845Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:27:19.848Z - debug: Called connection.release() again to confirm whether connection is closed.Since 'dbUtil.pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:27:19.848Z - debug: db connection is released succesfully
+2016-11-18T09:27:19.848Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:27:30.317Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:27:30.317Z - info: Posting feedback and rating
+2016-11-18T09:27:30.317Z - info: Recipe array length is 2
+2016-11-18T09:27:30.317Z - debug: Rating isa:3 ==>3
+2016-11-18T09:27:30.317Z - debug: Rating isb:3 ==>3
+2016-11-18T09:27:30.317Z - debug: Rating sum is 6
+2016-11-18T09:27:30.318Z - debug: Rounding up recipe rating
+2016-11-18T09:27:30.318Z - debug: Rounded recipe rating is 3
+2016-11-18T09:27:30.318Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:27:30.318Z - debug: Rounded overall rating is 3
+2016-11-18T09:27:30.318Z - debug: Final recipe rating is 3
+2016-11-18T09:27:30.320Z - debug: Final rating of order id 3
+2016-11-18T09:27:30.320Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:27:30.320Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:27:30.320Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:27:30.322Z - debug: Called connection.release() again to confirm whether connection is closed.Since 'dbUtil.pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:27:30.322Z - debug: db connection is released succesfully
+2016-11-18T09:27:30.322Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:36:41.142Z - debug: Creating db connection pool
+2016-11-18T09:36:41.204Z - info: Listenening on 9095
+2016-11-18T09:36:46.566Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:36:46.567Z - info: Posting feedback and rating
+2016-11-18T09:36:46.567Z - info: Recipe array length is 2
+2016-11-18T09:36:46.567Z - debug: Rating isa:3 ==>3
+2016-11-18T09:36:46.567Z - debug: Rating isb:3 ==>3
+2016-11-18T09:36:46.567Z - debug: Rating sum is 6
+2016-11-18T09:36:46.567Z - debug: Rounding up recipe rating
+2016-11-18T09:36:46.568Z - debug: Rounded recipe rating is 3
+2016-11-18T09:36:46.568Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:36:46.568Z - debug: Rounded overall rating is 3
+2016-11-18T09:36:46.568Z - debug: Final recipe rating is 3
+2016-11-18T09:36:46.569Z - debug: Final rating of order id 3
+2016-11-18T09:36:46.569Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:36:46.569Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:39:02.633Z - debug: Creating db connection pool
+2016-11-18T09:39:02.699Z - info: Listenening on 9095
+2016-11-18T09:39:05.876Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:39:05.876Z - info: Posting feedback and rating
+2016-11-18T09:39:05.876Z - info: Recipe array length is 2
+2016-11-18T09:39:05.876Z - debug: Rating isa:3 ==>3
+2016-11-18T09:39:05.876Z - debug: Rating isb:3 ==>3
+2016-11-18T09:39:05.876Z - debug: Rating sum is 6
+2016-11-18T09:39:05.877Z - debug: Rounding up recipe rating
+2016-11-18T09:39:05.877Z - debug: Rounded recipe rating is 3
+2016-11-18T09:39:05.878Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:39:05.878Z - debug: Rounded overall rating is 3
+2016-11-18T09:39:05.878Z - debug: Final recipe rating is 3
+2016-11-18T09:39:05.878Z - debug: Final rating of order id 3
+2016-11-18T09:39:05.878Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:39:05.878Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:39:05.879Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:39:05.896Z - error: uncaughtException: releaseDbCon is not defined date=Fri Nov 18 2016 04:39:05 GMT-0500 (EST), pid=8503, uid=1000, gid=1000, cwd=/home/ec2-user/nodejs/feedback_rating/src, execPath=/usr/bin/node, version=v0.10.46, argv=[node, /home/ec2-user/nodejs/feedback_rating/src/server.js], rss=38883328, heapTotal=29087488, heapUsed=15851184, loadavg=[0.0029296875, 0.0146484375, 0.04541015625], uptime=863109.69169422, trace=[column=25, file=/home/ec2-user/nodejs/feedback_rating/src/org.common/utils/db/db_util.js, function=Query._callback, line=116, method=_callback, native=false, column=24, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js, function=Query.Sequence.end, line=86, method=Sequence.end, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query._handleFinalResultPacket, line=144, method=_handleFinalResultPacket, native=false, column=8, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js, function=Query.EofPacket, line=128, method=EofPacket, native=false, column=23, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol._parsePacket, line=280, method=_parsePacket, native=false, column=12, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js, function=Parser.write, line=74, method=write, native=false, column=16, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js, function=Protocol.write, line=39, method=write, native=false, column=28, file=/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js, function=, line=109, method=null, native=false, column=17, file=events.js, function=Socket.emit, line=95, method=emit, native=false, column=14, file=_stream_readable.js, function=, line=765, method=null, native=false], stack=[ReferenceError: releaseDbCon is not defined,     at Query._callback (/home/ec2-user/nodejs/feedback_rating/src/org.common/utils/db/db_util.js:116:25),     at Query.Sequence.end (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Sequence.js:86:24),     at Query._handleFinalResultPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:144:8),     at Query.EofPacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/sequences/Query.js:128:8),     at Protocol._parsePacket (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:280:23),     at Parser.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Parser.js:74:12),     at Protocol.write (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/protocol/Protocol.js:39:16),     at Socket.<anonymous> (/home/ec2-user/nodejs/feedback_rating/node_modules/mysql/lib/Connection.js:109:28),     at Socket.emit (events.js:95:17),     at Socket.<anonymous> (_stream_readable.js:765:14)]
+2016-11-18T09:40:05.751Z - debug: Creating db connection pool
+2016-11-18T09:40:05.814Z - info: Listenening on 9095
+2016-11-18T09:40:10.304Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:40:10.304Z - info: Posting feedback and rating
+2016-11-18T09:40:10.304Z - info: Recipe array length is 2
+2016-11-18T09:40:10.304Z - debug: Rating isa:3 ==>3
+2016-11-18T09:40:10.304Z - debug: Rating isb:3 ==>3
+2016-11-18T09:40:10.305Z - debug: Rating sum is 6
+2016-11-18T09:40:10.305Z - debug: Rounding up recipe rating
+2016-11-18T09:40:10.306Z - debug: Rounded recipe rating is 3
+2016-11-18T09:40:10.306Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:40:10.306Z - debug: Rounded overall rating is 3
+2016-11-18T09:40:10.306Z - debug: Final recipe rating is 3
+2016-11-18T09:40:10.306Z - debug: Final rating of order id 3
+2016-11-18T09:40:10.306Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:40:10.306Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:40:10.306Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:40:10.318Z - debug: db connection is released succesfully
+2016-11-18T09:40:10.318Z - debug: Checking whether feedback is already received for this order 2000=>true
+2016-11-18T09:40:23.421Z - info: Feedback request detail=>[object Object]
+2016-11-18T09:40:23.421Z - info: Posting feedback and rating
+2016-11-18T09:40:23.421Z - info: Recipe array length is 2
+2016-11-18T09:40:23.422Z - debug: Rating isa:3 ==>3
+2016-11-18T09:40:23.422Z - debug: Rating isb:3 ==>3
+2016-11-18T09:40:23.422Z - debug: Rating sum is 6
+2016-11-18T09:40:23.422Z - debug: Rounding up recipe rating
+2016-11-18T09:40:23.422Z - debug: Rounded recipe rating is 3
+2016-11-18T09:40:23.422Z - debug: Rounding up overall  rating.Wihout rounding is 3
+2016-11-18T09:40:23.422Z - debug: Rounded overall rating is 3
+2016-11-18T09:40:23.422Z - debug: Final recipe rating is 3
+2016-11-18T09:40:23.422Z - debug: Final rating of order id 3
+2016-11-18T09:40:23.422Z - debug: Feedback payload is {"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}
+2016-11-18T09:40:23.422Z - debug: Checking whether order has already received feedback.
+2016-11-18T09:40:23.423Z - debug: Executing=> select *from email_notification  where order_id='2000' and  restaruent_id='1' and is_feedback_rating_received=true
+2016-11-18T09:40:23.425Z - debug: db connection is released succesfully
+2016-11-18T09:40:23.425Z - debug: Checking whether feedback is already received for this order 2000=>false
+2016-11-18T09:40:23.425Z - info: Updating email notifications table
+2016-11-18T09:40:23.425Z - debug: Executing=>  update email_notification set is_feedback_rating_received=true,feedback_received_time=now() where order_id=2000 and restaruent_id=1
+2016-11-18T09:40:23.428Z - debug: Executing=>  update orders set rating_feedback_data='{"order_id":"2000","restaruent_id":"1","feedback":"test_feedback","economy":3,"ambience":3,"qos":3,"recipe_rating":["a:3","b:3"],"overall_recipe_rating":3,"overall_order_rating":3}' where id=2000 and restaruent_id=1
+2016-11-18T09:40:23.429Z - debug: db connection is released succesfully
+2016-11-18T09:40:23.435Z - info: Order updated successfully
+2016-11-18T09:40:23.435Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:40:23.435Z - debug: db connection is released succesfully
+2016-11-18T09:40:28.798Z - info: Getting order details of 2000
+2016-11-18T09:40:28.799Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T09:40:28.801Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3, \"economy\": 3, \"ambience\": 3, \"feedback\": \"test_feedback\", \"order_id\": \"2000\", \"recipe_rating\": [\"a:3\", \"b:3\"], \"restaruent_id\": \"1\", \"overall_order_rating\": 3, \"overall_recipe_rating\": 3}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T09:40:28.801Z - debug: Got exception.Called connection.release() again to confirm whether connection is closed.Since 'pool._freeConnections.indexOf(connection)' returns unstable value to decide whether connection is closed
+2016-11-18T09:40:28.802Z - debug: db connection is released succesfully
