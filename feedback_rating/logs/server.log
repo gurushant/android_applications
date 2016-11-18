@@ -6,3 +6,24 @@
 2016-11-18T06:12:19.985Z - debug: Connecting to the db
 2016-11-18T06:12:19.991Z - debug: Database connection object is [object Object]
 2016-11-18T06:12:19.996Z - info: Listenening on 9095
+2016-11-18T06:15:13.843Z - debug: Connecting to the db
+2016-11-18T06:15:13.848Z - debug: Database connection object is [object Object]
+2016-11-18T06:15:13.853Z - info: Listenening on 9095
+2016-11-18T06:15:23.967Z - debug: Connecting to the db
+2016-11-18T06:15:23.972Z - debug: Database connection object is [object Object]
+2016-11-18T06:15:23.977Z - info: Listenening on 9095
+2016-11-18T06:15:36.845Z - info: Getting order details of 2000
+2016-11-18T06:15:36.846Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
+2016-11-18T06:15:36.848Z - debug: Order does not exist =>2000
+2016-11-18T06:15:42.076Z - info: Getting order details of 2000
+2016-11-18T06:15:42.077Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T06:15:42.079Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3.5, \"economy\": 3.5, \"ambience\": 3.5, \"feedback\": \"this is test\", \"order_id\": \"2000\", \"recipe_rating\": [{\"chicken masala\": 3.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 3.5, \"overall_recipe_rating\": 3.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T06:17:29.419Z - debug: Connecting to the db
+2016-11-18T06:17:29.424Z - debug: Database connection object is [object Object]
+2016-11-18T06:17:29.429Z - info: Listenening on 9095
+2016-11-18T06:17:31.824Z - info: Getting order details of 2000
+2016-11-18T06:17:31.825Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=1
+2016-11-18T06:17:31.829Z - debug: Response of get order details is =>{"id":2000,"restaruent_id":1,"served_date_time":"2016-11-14T16:24:27.000Z","order_amount":2000,"customer_email":"gurushant033@gmail.com","customer_mobile":"9767976808","recipes_in_orders":"[\"veg birayani\", \"veg pulav\", \"paratha\", \"chicken masala\"]","rating_feedback_data":"{\"qos\": 3.5, \"economy\": 3.5, \"ambience\": 3.5, \"feedback\": \"this is test\", \"order_id\": \"2000\", \"recipe_rating\": [{\"chicken masala\": 3.5}], \"restaruent_id\": \"1\", \"overall_order_rating\": 3.5, \"overall_recipe_rating\": 3.5}","created_on":"2016-11-14T16:24:27.000Z"}
+2016-11-18T06:17:35.788Z - info: Getting order details of 2000
+2016-11-18T06:17:35.788Z - debug: Executing=> select *from orders where id=2000 and restaruent_id=2
+2016-11-18T06:17:35.790Z - debug: Order does not exist =>2000

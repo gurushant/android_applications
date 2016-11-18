@@ -13,7 +13,7 @@ app.use(bodyParser());
 *Following code includes the logger.js file and executes it and returns logger object.
 *This logger can be used to log the info,error,debug messages.
 */
-var logger = require("./utils/logger/logger");
+var logger = require("./org.common/utils/logger/logger");
 
 //reading server
 
@@ -22,12 +22,12 @@ var ERROR_MSG="{ \"status\":\"ERROR\", \"message\":\"Error occured.Please try ag
 /*
 *Following line executes 
 */
-var dbConnection = require("./utils/db/db_util");
+var dbConnection = require("./org.common/utils/db/db_util");
 
 /*
 *Following code  contains the reference to common methods modules.
 */
-var commonUtils=require('./common_methods/commonMethods');
+var commonUtils=require('./org.common//common_methods/commonMethods');
 
 //read server.properties file
 var serverProp=propertyReader('../config/server.properties');
