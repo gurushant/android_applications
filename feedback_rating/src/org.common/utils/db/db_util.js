@@ -7,9 +7,9 @@ var propertyReader = require('properties-reader');
 var logger = require("../logger/logger");
 var dbProp=propertyReader('../config/db.properties');
 
-logger.debug('Creating db connection pool');
+logger.debug('Creating db connection pool of '+dbProp.get('connection_pool')+' connections');
 var pool  = mysql.createPool({
-	 connectionLimit : 10,
+	 connectionLimit : dbProp.get('connection_pool'),
 	 host     : dbProp.get('host'),
          user     : dbProp.get('user'),
          password : dbProp.get('password'),
@@ -60,7 +60,7 @@ function releaseDbCon(connection)
                                         logger.error('Error while releasing db connection');
                                 }
                                 catch(err)
-                                {       logger.debug('Got exception.Called connection.release() again to confirm whether connection is closed.Since \'pool._freeConnections.indexOf(connection)\' returns unstable value to decide whether connection is closed');
+                                {       logger.warn('Got exception.Called connection.release() again to confirm whether connection is closed.Since \'pool._freeConnections.indexOf(connection)\' returns unstable value to decide whether connection is closed');
                                         logger.debug('db connection is released succesfully')
                                 }
 
@@ -95,7 +95,7 @@ exports.executeQuery=function(query,callback)
 exports.checkRecordExists=function(query,callback)
         {
                 var isRecordExist=true;
-                 logger.debug("Executing=> "+query);
+                 logger.debug("Executing whether feedback already exists => "+query);
                 pool.getConnection(function(err, connection) {
                 connection.query(query,function(err,rows)
                 {
