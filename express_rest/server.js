@@ -218,13 +218,15 @@ app.post('/rest/login',function(req,res){
 	console.log("login body request"+req.body);
 	console.log(req.session.token);
 	req.session.cookie.expires = false;
-	var isValidCredential=verifyLogin(req.body);
-	console.log('isValidCredential is '+isValidCredential);
-	res.send("file:///F:/P/Forms/PasswordKeyDelay/html/item_list.html");
+	var isValidCredential=verifyLogin(req.body,res);
+//	console.log('isValidCredential is '+isValidCredential);
+//	res.send("file:///F:/P/Forms/PasswordKeyDelay/html/item_list.html");
 });
 
 
-function verifyLogin( body)
+
+
+function verifyLogin( body,res)
 {
 	console.log('body is '+body);
 	var jsonData=null;
@@ -278,12 +280,28 @@ function verifyLogin( body)
 			if(isValidPass==true)
 			{
 				console.log('is >>  password valid '+isValidPass);
+				res.send("file:///F:/P/PasswordKeyDelay/html/item_list.html");
 				return isValidPass;
 			}
 		}
 	        console.log('is password valid '+isValidPass);
-		return isValidPass
-	 });
+	 
+		 if(isValidPass==true)
+                        {
+                                console.log('is >>  password valid '+isValidPass);
+                                res.send("file:///F:/P/PasswordKeyDelay/html/item_list.html");
+                                return isValidPass;
+                        }
+		else
+			{
+				 console.log('is >>  password valid '+isValidPass);
+                                res.send("file:///F:/P/PasswordKeyDelay/html/invalid_pwd.html");
+                                return isValidPass;
+			
+			}
+
+
+	});
 	
 }
 
@@ -299,9 +317,6 @@ function createDataMap(json)
 	}
 }
 
-app.get('/rest/login',function(req,res){
-        console.log(req.session.token);
-});
 
 app.post('/rest/logout',function(req,res){
 	req.session.destroy(function(err) {
