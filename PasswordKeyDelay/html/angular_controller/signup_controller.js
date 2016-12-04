@@ -6,6 +6,7 @@
  var delayArr = new Array();
  var passwordData = new Map();
  var attribute = null;
+ var serverIp="54.203.6.61";
 
  signUpDiv.controller("signup_controller", function($scope, $attrs,$http) {
   $scope.keyPress = function(event) {
@@ -81,22 +82,23 @@
      // existing_pass=angular.element('#existing_password').val();
      // console.log("$scope.existing_password=="+existing_pass);
      // console.log("json=="+JSON.stringify(passwordData, null, 4));
-     console.log("existing password"+document.getElementById('existing_password').value);
+   /*  console.log("existing password"+document.getElementById('existing_password').value);
      passwordData["existing_password"]=document.getElementById('existing_password').value;
      console.log(JSON.stringify(passwordData, null, 4));
-
+*/
      boolVal=verifyInput();
 
     if(boolVal==true)
     {
-    $http.post("http://54.149.195.217:9090/rest/changePassword",JSON.stringify(passwordData, null, 4),config).success(function(data)
+    $http.post("http://"+serverIp+":9090/rest/changePassword",JSON.stringify(passwordData, null, 4),config).success(function(data)
     {
       console.log("json=="+JSON.stringify(passwordData, null, 4));
+      alert('Successfully changed admin password');
       console.log("response from sign up "+data);
     }).
     error(function(status)
     {
-      
+      console.log('Error occured while changing password');
     });
     } 
   }
@@ -105,12 +107,12 @@
   {
     var retVal=true;
     var newPwd=null;
-    existing_pwd=document.getElementById('existing_password').value;
+/*   existing_pwd=document.getElementById('existing_password').value;
     if(existing_pwd!=null && existing_pwd.length==0)
     {
       document.getElementById("existing_password").style["border"] = "2px solid red";      
       retVal=false;
-    }
+    }*/
     newPwdFirst=document.getElementById('password_0').value;
     if(newPwdFirst==null || newPwdFirst.length==0 )
     {

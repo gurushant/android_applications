@@ -9,7 +9,7 @@
 		<script type="text/javascript">
 			var app=angular.module("edit_product",[]);
 			var selectedId=null;
-			var serverIpAddress="54.149.195.217";
+			var serverIpAddress="54.203.6.61";
 			//
 			///
 			app.directive('fileModel', ['$parse', function ($parse) {
@@ -43,9 +43,11 @@
                })
             
                .success(function(){
+               	alert('Successfully edited the product');
                })
             
                .error(function(){
+               alert('Error while updating the product');
                });
             }
          }]);

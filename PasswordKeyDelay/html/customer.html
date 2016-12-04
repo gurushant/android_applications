@@ -7,7 +7,7 @@
 	module=angular.module('item_list', []);
 	module.controller('items',function($scope,$http,$window)
 	{
-		var serverIpAddress="54.149.195.217";
+		var serverIpAddress="54.203.6.61";
 		
 			console.log("Hitting request...");
 			$http.get("http://"+serverIpAddress+":9090/rest/getProducts").success(function(res)

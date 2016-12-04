@@ -6,7 +6,7 @@ var loginDiv=angular.module('login',[]);
  endTime = 0;
  var delayArr = new Array();
  var attribute = null;
-		var serverIpAddress="54.149.195.217";
+ var serverIpAddress="54.203.6.61";
 
 loginDiv.controller('login_controller',function ($scope,$attrs,$http,$window){
 				$scope.ButtonClick=function(){
