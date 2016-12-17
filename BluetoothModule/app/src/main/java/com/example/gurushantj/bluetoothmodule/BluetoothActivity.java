@@ -91,13 +91,18 @@ public class BluetoothActivity extends AppCompatActivity  {
 
         //Read message from bluetooth
 
+
+
+    }
+
+    public void readMessageThread()
+    {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 readMessage();
             }
         }).start();
-
     }
 
     private void showToast(final byte bytes[])
@@ -126,13 +131,14 @@ public class BluetoothActivity extends AppCompatActivity  {
 
     public void readMessage()
     {
-        final int BUFFER_SIZE = 1024;
-        byte[] buffer = new byte[BUFFER_SIZE];
-        int bytes = 0;
-        int b = BUFFER_SIZE;
+
 
         while (true) {
             try {
+                final int BUFFER_SIZE = 1024;
+                byte[] buffer = new byte[BUFFER_SIZE];
+                int bytes = 0;
+                int b = BUFFER_SIZE;
              //   Toast.makeText(getApplicationContext(),"Listening to the port for data read",Toast.LENGTH_LONG ).show();
                 bytes = inputStream.read(buffer, bytes, BUFFER_SIZE - bytes);
                 showToast(buffer);
