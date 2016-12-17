@@ -25,7 +25,7 @@ public class BluetoothUtil {
     private OutputStream outputStream;
     private UUID applicationUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     FileWriter file = null;
-    BluetoothAdapter bluetoothAdapter;
+   static BluetoothAdapter bluetoothAdapter;
 
     private static BluetoothUtil bluetoothUtilInstance=null;
     public static  BluetoothUtil getInstance()
@@ -38,9 +38,20 @@ public class BluetoothUtil {
 
         return  bluetoothUtilInstance;
     }
+
+    private BluetoothAdapter getBluetoothAdapter()
+    {
+        return bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+    }
+
+    public static String getBluetoothAddress()
+    {
+        return bluetoothAdapter.getAddress();
+    }
     public String initBluetoothDevice() {
         Set<BluetoothDevice> pairedDevices = null;
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        bluetoothAdapter = getBluetoothAdapter();
         if (bluetoothAdapter == null) {
             return "Device does not support for bluetooth";
         } else {

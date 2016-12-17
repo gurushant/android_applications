@@ -39,7 +39,6 @@ public class Mode1Login extends AppCompatActivity {
                 public void onClick(View view) {
                     BluetoothUtil bluetoothUtilObj=BluetoothUtil.getInstance();
                     bluetoothUtilObj.writeMessage("#");
-
                 }
             });
         }
